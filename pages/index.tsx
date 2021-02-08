@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 import styles from '../styles/pages/index.module.scss';
 import Layout from '../components/Layout';
 
@@ -8,9 +6,7 @@ const IndexPage = () => (
     <h1>Otman Maowed</h1>
     <hr />
     <section className={styles.container}>
-      <div className={styles.img}>
-        <Image alt="Otman's Headshot" src="/images/headshot.png" layout="fill" quality={100} />
-      </div>
+      <img className={styles.img} alt="Otman's Headshot" src="/images/headshot.png" />
       <div className={styles.info}>
         <p className={styles.descriptor}>
           <i className="fas fa-fw fa-code" />

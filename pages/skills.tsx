@@ -5,19 +5,19 @@ const Skills = () => (
     <h1>Favourites</h1>
     <hr />
     <h2>Favourite Programming Languages</h2>
-    <p>JavaScript (TypeScript)</p>
-    <h2>Favourite JavaScript Framework</h2>
-    <p>React (Next.JS)</p>
+    <p>TypeScript</p>
+    <h2>Favourite JavaScript Library</h2>
+    <p>Next.js (ReactJS framework)</p>
     <h2>Favourite CSS Interpreter</h2>
     <p>SCSS</p>
     <br />
     <h1>Top Skills</h1>
     <hr />
     <h2>Programming Languages</h2>
-    <p>Python</p>
+    <p>JavaScript, Python</p>
     <h2>Web Development</h2>
     <p>SEO, Code and Image Optimization to reduce time to first byte</p>
-    <h2>React</h2>
+    <h2>React Tools</h2>
     <p>Redux</p>
     <h2>Database</h2>
     <p>Google FireStore (NoSQL)</p>
