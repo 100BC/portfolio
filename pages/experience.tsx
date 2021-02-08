@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 import { WorkExperience, SchoolProjects } from '../components/Experiences';
 
 const Experience = () => {
-  const [pageRender, setPageRender] = useState(<WorkExperience />);
+  const [pageRender, setPageRender] = useState(0);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -15,23 +15,21 @@ const Experience = () => {
     <Layout>
       <div className={styles.nav}>
         <button
-          className={`${styles.button} ${
-            pageRender.type.name === 'WorkExperience' ? styles.active : ''
-          }`}
+          className={`${styles.button} ${pageRender === 0 ? styles.active : ''}`}
           type="button"
-          onClick={() => setPageRender(<WorkExperience />)}>
+          onClick={() => setPageRender(0)}>
           Work Experience
         </button>
         <button
-          className={`${styles.button} ${
-            pageRender.type.name === 'SchoolProjects' ? styles.active : ''
-          }`}
+          className={`${styles.button} ${pageRender === 1 ? styles.active : ''}`}
           type="button"
-          onClick={() => setPageRender(<SchoolProjects />)}>
+          onClick={() => setPageRender(1)}>
           School Projects
         </button>
       </div>
-      <div className={styles.render}>{pageRender}</div>
+      <div className={styles.render}>
+        {pageRender === 0 ? <WorkExperience /> : <SchoolProjects />}
+      </div>
     </Layout>
   );
 };
