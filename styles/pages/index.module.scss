@@ -1,0 +1,49 @@
+@import 'styles/variables';
+
+.container {
+  display: flex;
+}
+
+.img {
+  position: relative;
+  width: 300px;
+  min-width: 300px;
+  height: 300px;
+  min-height: 300px;
+  border: solid 3pt $black;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 20pt;
+}
+
+.descriptor {
+  display: grid;
+  grid-template-columns: 16pt auto;
+  margin: 0;
+  column-gap: 15pt;
+}
+
+@media only screen and (max-width: 650px) {
+  .container {
+    flex-direction: column;
+    align-self: center;
+    width: 100%;
+  }
+
+  .img {
+    margin: auto;
+    margin-bottom: 10pt;
+  }
+
+  .info {
+    margin: auto;
+  }
+
+  .descriptor {
+    margin-bottom: 20pt;
+  }
+}

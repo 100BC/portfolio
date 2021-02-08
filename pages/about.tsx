@@ -1,16 +1,26 @@
-import Link from 'next/link';
 import Layout from '../components/Layout';
 
-const AboutPage = () => (
-  <Layout title="About | Next.js + TypeScript Example">
-    <h1>About</h1>
-    <p>This is the about page</p>
-    <p>
-      <Link href="/">
-        <a>Go home</a>
-      </Link>
-    </p>
+const professional = `I am a Junior UI and Front-End Developer. My passion lies in ensuring that websites and apps are user friendly. While writing code I try to think of potential bugs that can occur and subsequently fix them. When creating user interfaces, I try to empathize with what makes sense with the user rather than what makes sense to me. I always ask for feedback on my designs to create the best UI/UX.
+
+Currently most of my personal development time is consumed by Mooseical, my music blog and database focused on Canadian artists. As my passion project I am always seeking ways to enhance the project. Currently working on general fixes, populating the database and adding in small features. In the future I hope to move the project off of Google Firebase and create my own backend for the project. More info and link in the Experiences Tab`;
+
+const personal = `To no ones surprise I am a huge music enthusiast and you can usually find me with headphones on. Every week I try to find a new artist, album, or genre to listen to. Yearly I listen to approximately 100,000 minutes of music. I will provide excellent music recommendations, guaranteed!
+
+Since I was a child, I have thoroughly enjoyed learning about paleontology. In my spare time I watch documentaries on dinosaurs, mammals and evolution. I have a lot of dinosaur facts! 
+
+I also perform at comedic open mic nights, however that is currently on hold due to COVID-19.
+
+Finally, like many I enjoy video games, TV, and movies.`;
+
+const About = () => (
+  <Layout>
+    <h1>Professional</h1>
+    <hr />
+    <p style={{ whiteSpace: 'pre-wrap' }}>{professional}</p>
+    <h1>Personal</h1>
+    <hr />
+    <p style={{ whiteSpace: 'pre-wrap' }}>{personal}</p>
   </Layout>
 );
 
-export default AboutPage;
+export default About;

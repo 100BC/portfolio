@@ -1,15 +1,36 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import Image from 'next/image';
+
+import styles from '../styles/pages/index.module.scss';
+import Layout from '../components/Layout';
 
 const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
+  <Layout>
+    <h1>Otman Maowed</h1>
+    <hr />
+    <section className={styles.container}>
+      <div className={styles.img}>
+        <Image alt="Otman's Headshot" src="/images/headshot.png" layout="fill" quality={100} />
+      </div>
+      <div className={styles.info}>
+        <p className={styles.descriptor}>
+          <i className="fas fa-fw fa-code" />
+          UI and Front-End Developer
+        </p>
+        <p className={styles.descriptor}>
+          <i className="fas fa-fw fa-building" />
+          Freelancer Seeking Permanent&nbsp;Position
+        </p>
+        <p className={styles.descriptor}>
+          <i className="fas fa-fw fa-graduation-cap" />
+          University&nbsp;of&nbsp;Alberta, B.Sc.Computing&nbsp;Science, Class of 2020
+        </p>
+        <p className={styles.descriptor}>
+          <i className="fas fa-fw fa-map-marker-alt" />
+          Edmonton&nbsp;AB,&nbsp;Canada, Willing&nbsp;to&nbsp;Relocate
+        </p>
+      </div>
+    </section>
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;

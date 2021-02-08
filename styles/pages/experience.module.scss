@@ -1,0 +1,99 @@
+@import 'styles/variables';
+
+.nav {
+  position: fixed;
+  width: 756pt;
+  max-width: 100%;
+  margin-top: -5pt;
+  margin-left: -2.5%;
+}
+
+.button {
+  width: 50%;
+  height: 40pt;
+  border: 1pt solid $black;
+  background-color: #484848;
+  color: $white;
+  font-size: 1.2em;
+
+  &:hover {
+    background: #333;
+    color: #ccc;
+  }
+
+  &:focus {
+    outline: solid 1px $white;
+    outline-offset: -3px;
+  }
+}
+
+.active {
+  border: solid 2pt #000;
+  background: $red;
+
+  &:hover {
+    background: #600;
+  }
+}
+
+.render {
+  padding-top: 50pt;
+}
+
+.descriptor {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 8pt;
+}
+
+.title,
+.date {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.date {
+  font-weight: normal;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.location {
+  width: fit-content;
+  margin: 0;
+  font-weight: normal;
+  font-size: 1.3em;
+}
+
+.link {
+  display: block;
+  width: fit-content;
+  margin-bottom: 16pt;
+  font-size: 1.3em;
+  font-family: $serif;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  i {
+    margin-right: 5pt;
+  }
+}
+
+@media only screen and (max-width: $phone) {
+  .button {
+    font-size: 1em;
+  }
+
+  .descriptor {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .date {
+    margin-top: 5pt;
+    text-align: start;
+  }
+}
