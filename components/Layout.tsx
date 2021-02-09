@@ -8,7 +8,7 @@ type Props = {
 };
 
 const Layout = ({ children, title = 'Otman Maowed' }: Props) => (
-  <div>
+  <>
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
@@ -29,7 +29,7 @@ const Layout = ({ children, title = 'Otman Maowed' }: Props) => (
     </Head>
     <Header />
     <main>{children}</main>
-  </div>
+  </>
 );
 
 export default Layout;

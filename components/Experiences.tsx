@@ -35,7 +35,7 @@ export const WorkExperience = () => (
     </div>
     <h3 className={styles.location}>Edmonton, AB</h3>
     <ul>
-      <li>Created websites for local businesses</li>
+      <li>Created a website for a local business</li>
       <li>Ensured basic SEO</li>
       <li>Websites follow responsive design</li>
     </ul>
@@ -45,7 +45,7 @@ export const WorkExperience = () => (
       target="_blank"
       rel="noopener noreferrer">
       <i className="fas fa-fw fa-link" />
-      Example
+      Website
     </a>
     <br />
     <h1>Portfolio</h1>
@@ -85,7 +85,7 @@ export const WorkExperience = () => (
       <li>Mobile App development using React Native and JSX</li>
       <li>Web Portal development using C#, jQuery, HTML, CSS and ReactJS</li>
       <li>Assisted in refactoring the Mobile App to approximately 60% of its original size</li>
-      <li>Created a Serverless package to AWS connecting the App, Portal and Databases together</li>
+      <li>Created an AWS Lambda function connecting the App, Portal and Databases together</li>
       <li>Identified and corrected UI/UX problems in both the Portal and App</li>
       <li>Traced and fixed bugs in large codebases of 12,000+ lines of code</li>
     </ul>

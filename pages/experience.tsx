@@ -13,7 +13,7 @@ const Experience = () => {
 
   return (
     <Layout>
-      <div className={styles.nav}>
+      <nav className={styles.nav}>
         <button
           className={`${styles.button} ${pageRender === 0 ? styles.active : ''}`}
           type="button"
@@ -26,8 +26,10 @@ const Experience = () => {
           onClick={() => setPageRender(1)}>
           University Projects
         </button>
-      </div>
-      <div className={styles.render}>{pageRender === 0 ? <WorkExperience /> : <UniProjects />}</div>
+      </nav>
+      <section className={styles.render}>
+        {pageRender === 0 ? <WorkExperience /> : <UniProjects />}
+      </section>
     </Layout>
   );
 };

@@ -2,7 +2,7 @@ import Layout from '../components/Layout';
 
 const professional = `I am a Junior UI and Front-End Developer. My passion lies in ensuring that websites and apps are user friendly. While writing code I try to think of potential bugs that can occur and subsequently fix them. When creating user interfaces, I try to empathize with what makes sense with the user rather than what makes sense to me. I always ask for feedback on my designs to create the best UI/UX.
 
-Currently most of my personal development time is consumed by Mooseical, my music blog and database focused on Canadian artists. As it's my passion project I am always seeking ways to enhance it. Currently I am working on general fixes, populating the database and adding in small features. In the future I hope to move the project off of Google Firebase and create my own backend for the project. More info and link in the Experiences Tab.`;
+Currently most of my personal development time is consumed by Mooseical, my music blog and database focused on Canadian artists. As it's my passion project I am always seeking ways to enhance it. Currently I am working on general fixes, populating the database and adding in small features. In the future I hope to move the project off of Google Firebase and create my own backend for the project. More info and link in the Experience Tab.`;
 
 const personal = `To no ones surprise I am a huge music enthusiast and you can usually find me with headphones on. Every week I try to find a new artist, album, or genre to listen to. Yearly I listen to approximately 100,000 minutes of music. I will provide excellent music recommendations, guaranteed!
 
@@ -16,10 +16,10 @@ const About = () => (
   <Layout>
     <h1>Professional</h1>
     <hr />
-    <p style={{ whiteSpace: 'pre-wrap' }}>{professional}</p>
+    <pre>{professional}</pre>
     <h1>Personal</h1>
     <hr />
-    <p style={{ whiteSpace: 'pre-wrap' }}>{personal}</p>
+    <pre>{personal}</pre>
   </Layout>
 );
 
