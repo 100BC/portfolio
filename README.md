@@ -2,14 +2,36 @@
 
 This website was built with ReactJS to host personal information for potential employers.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+This project uses [yarn](https://classic.yarnpkg.com/en/)
 
-### `yarn dev`
+Run the development server:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+yarn dev
+```
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+# Linters & Formatter
+
+```bash
+# You can use VSCode ESLint, and StyleLint Extensions for automatic Linting
+
+yarn eslint . --ext .js,.jsx,.ts,.tsx
+
+yarn stylelint "styles/**/*.scss"
+```
+
+### Formatting
+
+```bash
+# auto fixes the files according to the rules
+
+# can enable auto format for Prettier via VSCode Extensions
+yarn prettier --write .
+
+# Prettier will not reorder based on rules
+yarn stylelint "styles/**/*.scss" --fix
+```
