@@ -92,7 +92,7 @@ export const WorkExperience = () => (
   </>
 );
 
-export const SchoolProjects = () => (
+export const UniProjects = () => (
   <>
     <h1>this.node.app</h1>
     <hr />

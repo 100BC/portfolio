@@ -4,7 +4,7 @@ const Skills = () => (
   <Layout>
     <h1>Favourites</h1>
     <hr />
-    <h2>Favourite Programming Languages</h2>
+    <h2>Favourite Programming Language</h2>
     <p>TypeScript</p>
     <h2>Favourite JavaScript Library</h2>
     <p>Next.js (ReactJS framework)</p>
@@ -14,15 +14,15 @@ const Skills = () => (
     <h1>Top Skills</h1>
     <hr />
     <h2>Programming Languages</h2>
-    <p>JavaScript, Python</p>
+    <p>TypeScript, JavaScript, Python</p>
     <h2>Web Development</h2>
     <p>SEO, Code and Image Optimization to reduce time to first byte</p>
     <h2>React Tools</h2>
-    <p>Redux</p>
+    <p>Next.js, Redux</p>
     <h2>Database</h2>
     <p>Google FireStore (NoSQL)</p>
     <h2>Design Tools</h2>
-    <p>HTML, CSS, Bootstrap, DOM Manipulation</p>
+    <p>HTML, CSS, SCSS, Bootstrap, DOM Manipulation</p>
     <h2>UI/UX</h2>
     <p>Responsive Design, User-Centred Design, User Research, Accessibility, Design</p>
     <h2>Fundamentals</h2>
