@@ -82,6 +82,15 @@
   }
 }
 
+.copy {
+  display: none;
+  margin-left: 5pt;
+}
+
+.email:hover > .copy {
+  display: initial;
+}
+
 @media only screen and (max-width: $phone) {
   .navlink {
     font-size: 1.1em;

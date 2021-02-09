@@ -50,13 +50,17 @@ const Header = () => {
         </Link>
       </nav>
       <div className={styles.container}>
-        <button type="button" className={styles.link} onClick={() => copyEmail()}>
+        <button
+          type="button"
+          className={`${styles.link} ${styles.email}`}
+          onClick={() => copyEmail()}>
           {copied ? (
             'Copied to Clipboard'
           ) : (
             <>
               <i className="fas fa-fw fa-envelope" />
               <span>Email</span>
+              <i className={`fas fa-fw fa-copy ${styles.copy}`} />
             </>
           )}
         </button>
