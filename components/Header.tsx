@@ -4,6 +4,8 @@ import { useRouter } from 'next/router';
 
 import styles from '../styles/components/Header.module.scss';
 
+const emailObfuscation = ['om', 'ao', 'we', 'd1', '@', 'gm', 'ai', 'l.', 'com'];
+
 const Header = () => {
   const router = useRouter();
   const [copied, setCopied] = useState(false);
@@ -17,7 +19,7 @@ const Header = () => {
   }, [copied]);
 
   const copyEmail = () => {
-    navigator.clipboard.writeText('omaowed1@gmail.com').then(() => {
+    navigator.clipboard.writeText(emailObfuscation.join('')).then(() => {
       setCopied(true);
     });
   };
