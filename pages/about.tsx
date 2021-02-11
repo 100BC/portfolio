@@ -1,3 +1,4 @@
+import styles from '../styles/pages/experience.module.scss';
 import Layout from '../components/Layout';
 
 const professional = `I am a Junior UI and Front-End Developer. My passion lies in ensuring that websites and apps are user friendly. While writing code I try to think of potential bugs that can occur and subsequently fix them. When creating user interfaces, I try to empathize with what makes sense with the user rather than what makes sense to me. I always ask for feedback on my designs to create the best UI/UX.
@@ -20,6 +21,18 @@ const About = () => (
     <h1>Personal</h1>
     <hr />
     <pre>{personal}</pre>
+    <a
+      className={styles.link}
+      href="https://open.spotify.com/playlist/1GPCQfyt6DaOUVicnUnuda?si=W9xo9KmBQh2ZZFE3sxrlZg">
+      <i className="fas fa-fw fa-link" />
+      Spotify Playlist: Favourite Songs of 2019
+    </a>
+    <a
+      className={styles.link}
+      href="https://open.spotify.com/playlist/0Bfqb3R1cIYa7KRaSxRD9r?si=oRX-0u7qRZ6Io5Llq3nzlg">
+      <i className="fas fa-fw fa-link" />
+      Spotify Playlist: Favourite Songs of 2020
+    </a>
   </Layout>
 );
 
