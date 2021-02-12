@@ -15,10 +15,10 @@ Finally, like many I enjoy video games, TV, and movies.`;
 
 const About = () => (
   <Layout>
-    <h1>Professional</h1>
+    <h2>Professional</h2>
     <hr />
     <pre>{professional}</pre>
-    <h1>Personal</h1>
+    <h2>Personal</h2>
     <hr />
     <pre>{personal}</pre>
     <a

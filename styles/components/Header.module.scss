@@ -28,7 +28,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4em;
+  font-size: 1.4rem;
 
   &:hover {
     background: #000;
@@ -61,7 +61,7 @@
   width: fit-content;
   color: #292929;
   font-weight: 600;
-  font-size: 1.3em;
+  font-size: 1.3rem;
   text-shadow: 0 0 2px $white;
 
   span {
@@ -93,11 +93,11 @@
 
 @media only screen and (max-width: $phone) {
   .navlink {
-    font-size: 1.1em;
+    font-size: 1.1rem;
   }
 
   .link {
-    font-size: 1em;
+    font-size: 1rem;
 
     span {
       margin-left: 0;
@@ -107,6 +107,6 @@
 
 @media only screen and (max-width: 320px) {
   .link {
-    font-size: 0.9em;
+    font-size: 0.9rem;
   }
 }

@@ -50,7 +50,7 @@
 .title,
 .date {
   margin: 0;
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 .date {
@@ -63,14 +63,14 @@
   width: fit-content;
   margin: 0;
   font-weight: normal;
-  font-size: 1.3em;
+  font-size: 1.3rem;
 }
 
 .link {
   display: block;
   width: fit-content;
   margin-bottom: 16pt;
-  font-size: 1.3em;
+  font-size: 1.3rem;
   font-family: $serif;
 
   &:hover {
@@ -84,7 +84,7 @@
 
 @media only screen and (max-width: $phone) {
   .button {
-    font-size: 1em;
+    font-size: 1rem;
   }
 
   .descriptor {

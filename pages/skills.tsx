@@ -2,53 +2,53 @@ import Layout from '../components/Layout';
 
 const Skills = () => (
   <Layout>
-    <h1>Favourites</h1>
+    <h2>Favourites</h2>
     <hr />
-    <h2>Favourite Programming Language</h2>
+    <h3>Favourite Programming Language</h3>
     <p>TypeScript</p>
-    <h2>Favourite JavaScript Library</h2>
+    <h3>Favourite JavaScript Library</h3>
     <p>Next.js (ReactJS framework)</p>
-    <h2>Favourite CSS Interpreter</h2>
+    <h3>Favourite CSS Interpreter</h3>
     <p>SCSS</p>
     <br />
-    <h1>Top Skills</h1>
+    <h2>Top Skills</h2>
     <hr />
-    <h2>Programming Languages</h2>
+    <h3>Programming Languages</h3>
     <p>TypeScript, JavaScript, Python</p>
-    <h2>Web Development</h2>
+    <h3>Web Development</h3>
     <p>SEO, Code and Image Optimization to reduce time to first byte</p>
-    <h2>React</h2>
+    <h3>React</h3>
     <p>Next.js, Redux</p>
-    <h2>Database</h2>
+    <h3>Database</h3>
     <p>Google FireStore (NoSQL)</p>
-    <h2>Design Tools</h2>
+    <h3>Design Tools</h3>
     <p>HTML, CSS, SCSS, JSX, Bootstrap, DOM Manipulation</p>
-    <h2>UI/UX</h2>
+    <h3>UI/UX</h3>
     <p>Responsive Design, User-Centred Design, User Research, Accessibility, Design</p>
-    <h2>Fundamentals</h2>
+    <h3>Fundamentals</h3>
     <p>Agile, Code Review, Debugging, GIT, HTTPS Methods</p>
     <br />
-    <h1>Competent Skills</h1>
+    <h2>Competent Skills</h2>
     <hr />
-    <h2>Programming Languages</h2>
+    <h3>Programming Languages</h3>
     <p>Java, C#</p>
-    <h2>Mobile Development Tools</h2>
+    <h3>Mobile Development Tools</h3>
     <p>React Native, Android Studio</p>
-    <h2>Design Mockups</h2>
+    <h3>Design Mockups</h3>
     <p>AdobeXD, Figma</p>
     <br />
-    <h1>Rudimentary Skills</h1>
+    <h2>Rudimentary Skills</h2>
     <hr />
-    <h2>Programming Languages</h2>
+    <h3>Programming Languages</h3>
     <p>C, C++</p>
-    <h2>Serverless</h2>
+    <h3>Serverless</h3>
     <p>AWS, Google Firebase Functions</p>
-    <h2>SQL</h2>
+    <h3>SQL</h3>
     <p>SQLite3</p>
     <br />
-    <h1>Learning Next</h1>
+    <h2>Learning Next</h2>
     <hr />
-    <h2>Backend Development</h2>
+    <h3>Backend Development</h3>
     <p>GraphQL, ExpressJS</p>
   </Layout>
 );

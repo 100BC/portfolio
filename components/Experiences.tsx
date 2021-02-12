@@ -2,7 +2,7 @@ import styles from '../styles/pages/experience.module.scss';
 
 export const WorkExperience = () => (
   <>
-    <h1>Mooseical</h1>
+    <h2>Mooseical</h2>
     <hr />
     <div className={styles.descriptor}>
       <h3 className={styles.title}>Personal Project</h3>
@@ -27,7 +27,7 @@ export const WorkExperience = () => (
       Website
     </a>
     <br />
-    <h1>Freelance</h1>
+    <h2>Freelance</h2>
     <hr />
     <div className={styles.descriptor}>
       <h3 className={styles.title}>Web Developer</h3>
@@ -48,7 +48,7 @@ export const WorkExperience = () => (
       Website
     </a>
     <br />
-    <h1>Portfolio</h1>
+    <h2>Portfolio</h2>
     <hr />
     <div className={styles.descriptor}>
       <h3 className={styles.title}>Personal Project</h3>
@@ -74,7 +74,7 @@ export const WorkExperience = () => (
       GitHub
     </a>
     <br />
-    <h1>Trust Science</h1>
+    <h2>Trust Science</h2>
     <hr />
     <div className={styles.descriptor}>
       <h3 className={styles.title}>Summer Intern</h3>
@@ -94,7 +94,7 @@ export const WorkExperience = () => (
 
 export const UniProjects = () => (
   <>
-    <h1>this.node.app</h1>
+    <h2>this.node.app</h2>
     <hr />
     <div className={styles.descriptor}>
       <h3 className={styles.title}>Developer</h3>
@@ -116,7 +116,7 @@ export const UniProjects = () => (
       GitHub
     </a>
     <br />
-    <h1>Indigenous AR Learning Experience</h1>
+    <h2>Indigenous AR Learning Experience</h2>
     <hr />
     <div className={styles.descriptor}>
       <h3 className={styles.title}>Creator / Researcher</h3>
@@ -134,7 +134,7 @@ export const UniProjects = () => (
       <li>Improved the tour based on user feedback of 45 individuals</li>
     </ul>
     <br />
-    <h1>MyAdvisor</h1>
+    <h2>MyAdvisor</h2>
     <hr />
     <div className={styles.descriptor}>
       <h3 className={styles.title}>Designer</h3>
@@ -165,7 +165,7 @@ export const UniProjects = () => (
       UI Gallery
     </a>
     <br />
-    <h1>Alexandria</h1>
+    <h2>Alexandria</h2>
     <hr />
     <div className={styles.descriptor}>
       <h3 className={styles.title}>Developer / Designer</h3>
@@ -197,7 +197,7 @@ export const UniProjects = () => (
       UI Gallery
     </a>
     <br />
-    <h1>Canned</h1>
+    <h2>Canned</h2>
     <hr />
     <div className={styles.descriptor}>
       <h3 className={styles.title}>Producer / Developer</h3>

@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 
 const IndexPage = () => (
   <Layout>
-    <h1>Otman Maowed</h1>
+    <h2>Otman Maowed</h2>
     <hr />
     <section className={styles.container}>
       <img className={styles.img} alt="Otman's Headshot" src="/images/headshot.png" />
