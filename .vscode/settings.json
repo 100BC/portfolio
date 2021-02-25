@@ -1,0 +1,32 @@
+{
+  "cSpell.words": [
+    "Couldn",
+    "Mooseical",
+    "Vercel",
+    "anonymized",
+    "aren",
+    "bandcamp",
+    "collab",
+    "collabs",
+    "didn",
+    "doesn",
+    "favourite",
+    "firestore",
+    "msapplication",
+    "musichead",
+    "musicheads",
+    "pfft",
+    "preconnect",
+    "recaptcha",
+    "sitekey",
+    "soundcloud",
+    "spoti",
+    "spotify",
+    "youtu",
+    "youtube"
+  ],
+  "typescript.suggest.paths": false, //for pathIntellisense
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true
+}
