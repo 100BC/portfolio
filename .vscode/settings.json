@@ -25,7 +25,6 @@
     "youtu",
     "youtube"
   ],
-  "typescript.suggest.paths": false, //for pathIntellisense
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true
