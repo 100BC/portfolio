@@ -1,0 +1,60 @@
+{
+  // Stylelint
+  "stylelint.validate": ["css", "postcss", "scss", "svelte"],
+  "stylelint.packageManager": "pnpm",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": "explicit"
+  },
+
+  // Prettier
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+
+  // ESLint
+  "eslint.validate": ["javascript", "typescript", "svelte"],
+
+  // Code Spell Checker
+  "cSpell.words": [
+    "msapplication",
+    "noindex",
+    "pnpm",
+    "preconnect",
+    "stylelint",
+    "sveltekit"
+  ],
+  "cSpell.ignorePaths": [
+    "node_modules",
+    ".vscode",
+    ".prettierignore",
+    ".prettierrc.json",
+    ".stylelintrc.json",
+    "package.json",
+    "next.config.js",
+    ".env.local",
+    "pnpm-lock.yaml",
+    "package-lock.json",
+    "yarn.lock"
+  ],
+
+  // Peacock
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#430055",
+    "activityBar.activeBorder": "#2a1816",
+    "activityBar.background": "#430055",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#806400",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "titleBar.activeBackground": "#1b0022",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#1b002299",
+    "titleBar.inactiveForeground": "#e7e7e799",
+    "sash.hoverBorder": "#57076d",
+    "commandCenter.border": "#e7e7e799"
+  },
+  "peacock.color": "#1b0022"
+}
