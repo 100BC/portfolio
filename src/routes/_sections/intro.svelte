@@ -7,12 +7,12 @@
     </div>
     <nav>
       <h2>Web and Software Developer</h2>
-      <ul>
+      <ol>
         <li><a href="#work">About</a></li>
         <li><a href="#work">Tech Stack</a></li>
         <li><a href="#work">Work Experience</a></li>
         <li><a href="#work">Contact</a></li>
-      </ul>
+      </ol>
     </nav>
   </div>
   <img src="/images/otman.webp" alt="Otman Maoued" />
@@ -54,10 +54,7 @@
       margin-bottom: 0;
     }
 
-    > ul {
-      padding: 0;
-      list-style-type: none;
-
+    > ol {
       > li {
         width: fit-content;
         margin-top: 2rem;
@@ -69,7 +66,7 @@
         }
 
         &:hover {
-          color: $theme600;
+          color: $theme500;
         }
       }
     }
