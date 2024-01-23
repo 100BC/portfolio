@@ -38,6 +38,14 @@
 
     > h1 {
       margin: 0;
+      color: transparent;
+      background-image: linear-gradient(
+        90deg,
+        $theme400 0%,
+        $theme500 60%,
+        $theme600 100%
+      );
+      background-clip: text;
     }
   }
 
