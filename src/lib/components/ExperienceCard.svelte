@@ -1,16 +1,16 @@
 <script lang="ts">
-  export let fn: () => void;
+  export let href: string;
 </script>
 
-<button type="button" on:click={fn}>
+<a {href}>
   <h3><slot name="title" /></h3>
   <i><slot name="role" /></i>
   <time><slot name="duration" /></time>
   <span class="readMore">Read more</span>
-</button>
+</a>
 
 <style lang="scss">
-  button {
+  a {
     position: relative;
     display: flex;
     flex-direction: column;

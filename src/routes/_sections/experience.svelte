@@ -5,8 +5,10 @@
   import Contract from './experiences/contract.svelte';
   import Igniter from './experiences/igniter.svelte';
   import Interface from './experiences/interface.svelte';
+  import { page } from '$app/stores';
+  import { goto } from '$app/navigation';
 
-  let cardOpen: string | null = null;
+  $: cardOpen = $page.url.searchParams.get('exp');
 </script>
 
 <section aria-label="Work Experience" id="experience" class="fullPage">
@@ -21,37 +23,36 @@
     >
       <ul>
         <li class:selected={cardOpen === 'igniter'}>
-          <button type="button" on:click={() => (cardOpen = 'igniter')}>
-            Igniter Tickets
-          </button>
+          <a href="?exp=igniter#experience">Igniter Tickets</a>
         </li>
         <li class:selected={cardOpen === 'interface'}>
-          <button type="button" on:click={() => (cardOpen = 'interface')}>
-            Interface Fluidics
-          </button>
+          <a href="?exp=interface#experience">Interface Fluidics</a>
         </li>
         <li class:selected={cardOpen === 'buddytree'}>
-          <button type="button" on:click={() => (cardOpen = 'buddytree')}>
-            Buddytree
-          </button>
+          <a href="?exp=buddytree#experience">Buddytree</a>
         </li>
         <li class:selected={cardOpen === 'contract'}>
-          <button type="button" on:click={() => (cardOpen = 'contract')}>
-            Contract
-          </button>
+          <a href="?exp=contract#experience">Contract</a>
         </li>
         <li>
-          <button type="button" on:click={() => (cardOpen = null)}>
-            Close
-          </button>
+          <a href=".#experience">Close</a>
         </li>
       </ul>
     </header>
-    <header class="headerSelect">
+    <header
+      class="headerSelect"
+      in:fade={{ delay: 200 }}
+      out:fade={{ duration: 200 }}
+    >
       <label for="select">Filter:</label>
-      <select bind:value={cardOpen} id="select">
-        <option value="igniter">Igniter Tickets</option>
-        <option value="interface">Interface Fluidics</option>
+      <select
+        bind:value={cardOpen}
+        id="select"
+        on:change={() =>
+          goto(cardOpen ? `?exp=${cardOpen}#experience` : '.#experience')}
+      >
+        <option value="igniter"> Igniter Tickets </option>
+        <option value="interface"> Interface Fluidics </option>
         <option value="buddytree">Buddytree</option>
         <option value="contract">Contract</option>
         <option value={null}>Close</option>
@@ -62,7 +63,7 @@
   {#if cardOpen === null}
     <ol class="grid" out:scale={{ duration: 200 }} in:scale={{ delay: 200 }}>
       <li>
-        <ExperienceCard fn={() => (cardOpen = 'igniter')}>
+        <ExperienceCard href="?exp=igniter#experience">
           <svelte:fragment slot="title">Igniter Tickets</svelte:fragment>
           <svelte:fragment slot="role">Software Developer</svelte:fragment>
           <svelte:fragment slot="duration">
@@ -71,7 +72,7 @@
         </ExperienceCard>
       </li>
       <li>
-        <ExperienceCard fn={() => (cardOpen = 'interface')}>
+        <ExperienceCard href="?exp=interface#experience">
           <svelte:fragment slot="title">Interface Fluidics</svelte:fragment>
           <svelte:fragment slot="role">React Developer</svelte:fragment>
           <svelte:fragment slot="duration">
@@ -80,7 +81,7 @@
         </ExperienceCard>
       </li>
       <li>
-        <ExperienceCard fn={() => (cardOpen = 'buddytree')}>
+        <ExperienceCard href="?exp=buddytree#experience">
           <svelte:fragment slot="title">Buddytree</svelte:fragment>
           <svelte:fragment slot="role">Software Developer</svelte:fragment>
           <svelte:fragment slot="duration">
@@ -89,7 +90,7 @@
         </ExperienceCard>
       </li>
       <li>
-        <ExperienceCard fn={() => (cardOpen = 'contract')}>
+        <ExperienceCard href="?exp=contract#experience">
           <svelte:fragment slot="title">Contract Work</svelte:fragment>
           <svelte:fragment slot="role">Web Developer</svelte:fragment>
           <svelte:fragment slot="duration">2020-present</svelte:fragment>
@@ -145,11 +146,16 @@
         border-radius: $borderRadius;
         transition: background-color 1s;
 
-        > button {
+        > a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           width: 100%;
+          height: 100%;
           padding: 1rem;
           font-weight: bold;
           color: $theme400;
+          text-align: center;
           background: none;
 
           &:hover {
@@ -160,7 +166,7 @@
         &.selected {
           background-color: $theme400;
 
-          > button {
+          > a {
             color: #fff;
           }
         }
