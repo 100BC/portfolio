@@ -5,7 +5,7 @@
 <WorkExperience>
   <svelte:fragment slot="title">Contract Work</svelte:fragment>
   <svelte:fragment slot="role">
-    Creating Websites for local businesses
+    Creating websites for local businesses
   </svelte:fragment>
   <svelte:fragment slot="duration">2020 - present</svelte:fragment>
   <ul slot="tasks" class="tasks">
