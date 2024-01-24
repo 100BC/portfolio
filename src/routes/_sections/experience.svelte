@@ -96,10 +96,12 @@
 
   .grid {
     display: grid;
-    grid-template-columns: minmax(200px, 400px) minmax(200px, 400px);
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
     justify-content: center;
+    max-width: 800px;
     padding-left: 0;
+    margin: auto;
     list-style: none;
 
     > li {
@@ -118,10 +120,12 @@
         background: 0;
         background-color: white;
         border-radius: 10px;
+        box-shadow: 0 0 10px #fff;
 
         > h3 {
           margin: 0;
           font-size: 2.4rem;
+          transition: font-size 0.2s;
         }
 
         > i {
@@ -129,7 +133,13 @@
         }
 
         &:hover {
-          transform: translate(2px, 2px);
+          @include linearGradient(45deg);
+
+          color: white;
+
+          > h3 {
+            font-size: 3rem;
+          }
         }
       }
     }
@@ -165,6 +175,13 @@
           border-bottom: 2px solid $theme400;
         }
       }
+    }
+  }
+
+  @media screen and (width <= $phone) {
+    .grid {
+      display: flex;
+      flex-direction: column;
     }
   }
 </style>
