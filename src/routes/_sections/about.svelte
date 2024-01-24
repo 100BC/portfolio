@@ -83,7 +83,7 @@
 <style lang="scss">
   section {
     display: grid;
-    grid-template-columns: minmax(200px, 30%) 1fr;
+    grid-template-columns: minmax(180px, 30%) 1fr;
     gap: 2rem;
     align-items: center;
     padding-right: 2rem;
@@ -101,8 +101,6 @@
   }
 
   .title {
-    padding-bottom: 4rem;
-
     > h2 {
       margin: 0;
     }
@@ -110,6 +108,7 @@
 
   p {
     max-width: 80ch;
+    font-size: 1.8rem;
     line-height: 1.5;
   }
 </style>

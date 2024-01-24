@@ -22,12 +22,16 @@
   section {
     display: flex;
     flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     gap: 5rem;
+    place-content: center center;
     align-items: center;
-    justify-content: center;
 
     > img {
+      width: 256px;
+      height: 256px;
       border-radius: 20px;
+      object-fit: cover;
     }
   }
 
