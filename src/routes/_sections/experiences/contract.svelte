@@ -27,3 +27,14 @@
     <li>SCSS</li>
   </ul>
 </WorkExperience>
+
+<style lang="scss">
+  a {
+    color: $theme400;
+    text-decoration: underline;
+
+    &:hover {
+      color: $theme600;
+    }
+  }
+</style>

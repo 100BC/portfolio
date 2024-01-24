@@ -28,7 +28,7 @@
             Buddytree
           </button>
         </li>
-        <li>
+        <li class:selected={cardOpen === 'contract'}>
           <button type="button" on:click={() => (cardOpen = 'contract')}>
             Contract
           </button>
