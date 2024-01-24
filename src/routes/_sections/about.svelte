@@ -1,4 +1,5 @@
 <script lang="ts">
+  let tab = 0;
   let isTyping = true;
   let titleText = 'Software Developer';
   let titleIndex = 0;
@@ -64,19 +65,48 @@
     </div>
   </div>
   <div>
-    <p>
-      I am a Software Developer and Web Developer. I am primarily focused on
-      Front End Development, due to my background in Human Computer interaction.
-      This encompasses advanced knowledge in UI/UX, Semantic HTML, and Web
-      Accessibility Guidelines. I am also skilled in creating mobile friendly
-      websites through Responsive Web Design, SEO, and optimizing software to
-      reduce time-to-first byte.
-    </p>
-    <p>
-      While Front End Development is my forte, I am no stranger to backend
-      development, having created API routes, developed GraphQL servers,
-      optimized SQL queries and much more.
-    </p>
+    <div class="buttons">
+      <button
+        type="button"
+        on:click={() => (tab = 0)}
+        class:selected={tab === 0}
+      >
+        About
+      </button>
+      <button
+        type="button"
+        on:click={() => (tab = 1)}
+        class:selected={tab === 1}
+      >
+        Education
+      </button>
+    </div>
+    {#if tab === 1}
+      <div class="education tabContent">
+        <h3>Bachelor of Science: <em>Computer Science</em></h3>
+        <ul>
+          <li>University of Alberta, Class of <time>2020</time></li>
+          <li>Sociology Minor</li>
+          <li>Dean's Honour Roll <time>2020</time></li>
+        </ul>
+      </div>
+    {:else}
+      <div class="tabContent">
+        <p>
+          I am a Software Developer and Web Developer. I am primarily focused on
+          Front End Development, due to my background in Human Computer
+          interaction. This encompasses advanced knowledge in UI/UX, Semantic
+          HTML, and Web Accessibility Guidelines. I am also skilled in creating
+          mobile friendly websites through Responsive Web Design, SEO, and
+          optimizing software to reduce time-to-first byte.
+        </p>
+        <p>
+          While Front End Development is my forte, I am no stranger to back end
+          development, having created API routes, developed GraphQL servers,
+          optimized SQL queries and much more.
+        </p>
+      </div>
+    {/if}
   </div>
 </section>
 
@@ -110,5 +140,41 @@
     max-width: 80ch;
     font-size: 1.8rem;
     line-height: 1.5;
+  }
+
+  .buttons {
+    > button {
+      font-size: 2.4rem;
+      color: $theme400;
+      background: none;
+
+      &:hover {
+        color: $theme600;
+      }
+    }
+
+    .selected {
+      border-bottom: 2px solid;
+    }
+  }
+
+  .education {
+    > h3 {
+      margin-top: 18px;
+      font-size: 3rem;
+    }
+
+    > ul {
+      font-size: 2rem;
+      list-style: none;
+
+      > li:not(:first-child) {
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  .tabContent {
+    min-height: 300px;
   }
 </style>
