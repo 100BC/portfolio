@@ -1,4 +1,12 @@
-<div class="card">
+<script lang="ts">
+  import { fly } from 'svelte/transition';
+</script>
+
+<div
+  class="card"
+  in:fly={{ delay: 200, x: -200 }}
+  out:fly={{ duration: 100, x: 200 }}
+>
   <h3><slot name="title" /></h3>
   <h4><slot name="role" /></h4>
   <time><slot name="duration" /></time>
@@ -10,6 +18,7 @@
 
 <style lang="scss">
   .card {
+    max-width: 100ch;
     padding: 2rem;
     margin: auto;
     color: #000;

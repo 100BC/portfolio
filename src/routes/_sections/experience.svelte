@@ -1,5 +1,6 @@
 <script lang="ts">
   import ExperienceCard from '$lib/components/ExperienceCard.svelte';
+  import { fade, scale } from 'svelte/transition';
   import Buddytree from './experiences/buddytree.svelte';
   import Contract from './experiences/contract.svelte';
   import Igniter from './experiences/igniter.svelte';
@@ -12,7 +13,12 @@
   <h2>Work Experience</h2>
 
   {#if cardOpen}
-    <header aria-label="Work Experience" class="headerNav">
+    <header
+      aria-label="Work Experience"
+      class="headerNav"
+      in:fade={{ delay: 200 }}
+      out:fade={{ duration: 200 }}
+    >
       <ul>
         <li class:selected={cardOpen === 'igniter'}>
           <button type="button" on:click={() => (cardOpen = 'igniter')}>
@@ -41,10 +47,20 @@
         </li>
       </ul>
     </header>
+    <header class="headerSelect">
+      <label for="select">Filter:</label>
+      <select bind:value={cardOpen} id="select">
+        <option value="igniter">Igniter Tickets</option>
+        <option value="interface">Interface Fluidics</option>
+        <option value="buddytree">Buddytree</option>
+        <option value="contract">Contract</option>
+        <option value={null}>Close</option>
+      </select>
+    </header>
   {/if}
 
   {#if cardOpen === null}
-    <ol class="grid">
+    <ol class="grid" out:scale={{ duration: 200 }} in:scale={{ delay: 200 }}>
       <li>
         <ExperienceCard fn={() => (cardOpen = 'igniter')}>
           <svelte:fragment slot="title">Igniter Tickets</svelte:fragment>
@@ -113,6 +129,7 @@
   }
 
   .headerNav {
+    width: 100ch;
     max-width: 90%;
     margin: auto;
 
@@ -125,6 +142,8 @@
 
       > li {
         flex: 1 1;
+        border-radius: $borderRadius;
+        transition: background-color 1s;
 
         > button {
           width: 100%;
@@ -139,16 +158,45 @@
         }
 
         &.selected {
-          border-bottom: 2px solid $theme400;
+          background-color: $theme400;
+
+          > button {
+            color: #fff;
+          }
         }
       }
     }
+  }
+
+  .headerSelect {
+    display: none;
   }
 
   @media screen and (width <= $phone) {
     .grid {
       display: flex;
       flex-direction: column;
+    }
+
+    .headerNav {
+      display: none;
+    }
+
+    .headerSelect {
+      display: block;
+      font-size: 1.8rem;
+
+      > select {
+        width: 100%;
+        margin: 0 0 2rem;
+        font-size: 2rem;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        background-color: $theme400;
+        border: 0;
+        border-radius: $borderRadius;
+      }
     }
   }
 </style>

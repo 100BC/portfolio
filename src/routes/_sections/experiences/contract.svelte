@@ -4,9 +4,10 @@
 
 <WorkExperience>
   <svelte:fragment slot="title">Contract Work</svelte:fragment>
-  <svelte:fragment slot="role">Web Developer</svelte:fragment>
+  <svelte:fragment slot="role">
+    Creating Websites for local businesses
+  </svelte:fragment>
   <svelte:fragment slot="duration">2020 - present</svelte:fragment>
-  Creating Website for local businesses
   <ul slot="tasks" class="tasks">
     <li>
       <a href="https://www.jyoupsychology.ca">https://www.jyoupsychology.ca</a>
