@@ -1,4 +1,5 @@
 <script lang="ts">
+  import ExperienceCard from '$lib/components/ExperienceCard.svelte';
   import Buddytree from './experiences/buddytree.svelte';
   import Contract from './experiences/contract.svelte';
   import Igniter from './experiences/igniter.svelte';
@@ -45,32 +46,38 @@
   {#if cardOpen === null}
     <ol class="grid">
       <li>
-        <button type="button" on:click={() => (cardOpen = 'igniter')}>
-          <h3>Igniter Tickets</h3>
-          <i>Software Developer</i>
-          <time>Feb. 2022 - Nov. 2023</time>
-        </button>
+        <ExperienceCard fn={() => (cardOpen = 'igniter')}>
+          <svelte:fragment slot="title">Igniter Tickets</svelte:fragment>
+          <svelte:fragment slot="role">Software Developer</svelte:fragment>
+          <svelte:fragment slot="duration">
+            Feb. 2022 - Nov. 2023
+          </svelte:fragment>
+        </ExperienceCard>
       </li>
       <li>
-        <button type="button" on:click={() => (cardOpen = 'interface')}>
-          <h3>Interface Fluidics</h3>
-          <i>Software Developer</i>
-          <time>Oct. 2021 - Jan. 2022</time>
-        </button>
+        <ExperienceCard fn={() => (cardOpen = 'interface')}>
+          <svelte:fragment slot="title">Interface Fluidics</svelte:fragment>
+          <svelte:fragment slot="role">React Developer</svelte:fragment>
+          <svelte:fragment slot="duration">
+            Oct. 2021 - Jan. 2022
+          </svelte:fragment>
+        </ExperienceCard>
       </li>
       <li>
-        <button type="button" on:click={() => (cardOpen = 'buddytree')}>
-          <h3>Buddytree</h3>
-          <i>Software Developer</i>
-          <time>Feb. 2021 - Sept 2022</time>
-        </button>
+        <ExperienceCard fn={() => (cardOpen = 'buddytree')}>
+          <svelte:fragment slot="title">Buddytree</svelte:fragment>
+          <svelte:fragment slot="role">Software Developer</svelte:fragment>
+          <svelte:fragment slot="duration">
+            Feb. 2021 - Sept 2022
+          </svelte:fragment>
+        </ExperienceCard>
       </li>
       <li>
-        <button type="button" on:click={() => (cardOpen = 'contract')}>
-          <h3>Contract Work</h3>
-          <i>Web Developer</i>
-          <time>2020-present</time>
-        </button>
+        <ExperienceCard fn={() => (cardOpen = 'contract')}>
+          <svelte:fragment slot="title">Contract Work</svelte:fragment>
+          <svelte:fragment slot="role">Web Developer</svelte:fragment>
+          <svelte:fragment slot="duration">2020-present</svelte:fragment>
+        </ExperienceCard>
       </li>
     </ol>
   {:else if cardOpen === 'igniter'}
@@ -103,46 +110,6 @@
     padding-left: 0;
     margin: auto;
     list-style: none;
-
-    > li {
-      min-height: 200px;
-
-      > button {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        width: 100%;
-        height: 100%;
-        min-height: 200px;
-        padding: 2rem;
-        color: black;
-        text-align: start;
-        background: 0;
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: 0 0 10px #fff;
-
-        > h3 {
-          margin: 0;
-          font-size: 2.4rem;
-          transition: font-size 0.2s;
-        }
-
-        > i {
-          font-size: 2rem;
-        }
-
-        &:hover {
-          @include linearGradient(45deg);
-
-          color: white;
-
-          > h3 {
-            font-size: 3rem;
-          }
-        }
-      }
-    }
   }
 
   .headerNav {
