@@ -145,6 +145,7 @@
   .buttons {
     > button {
       font-size: 2.4rem;
+      font-weight: bold;
       color: $theme400;
       background: none;
 
