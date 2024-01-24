@@ -20,8 +20,9 @@
   function typing(_element: HTMLElement) {
     const interval = setInterval(() => {
       if (isTyping === false) {
-        titleText = titleText.slice(0, -1);
-        if (titleText.length === 0) {
+        titleText = titleText.slice(0, -2);
+
+        if (titleText.length <= 0) {
           if (titleIndex === titles.length - 1) {
             titleIndex = 0;
           } else {
@@ -54,31 +55,27 @@
 
 <section aria-label="about" class="fullPage" id="about">
   <div class="left">
-    <div>I am a</div>
-    <h2>
-      <span use:typing>{titleText}</span><span use:blinking>|</span>
-      <noscript>Software Developer</noscript>
-    </h2>
+    <div class="title">
+      <div>I am a</div>
+      <h2 aria-label="Software Developer">
+        <span use:typing>{titleText}</span><span use:blinking>|</span>
+        <noscript>Software Developer</noscript>
+      </h2>
+    </div>
   </div>
   <div>
     <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
-      quidem error distinctio numquam id, expedita nulla excepturi quasi
-      assumenda nam delectus rem sed similique quae vitae animi esse qui quam,
-      quod inventore maiores maxime dolores. Aspernatur iste ducimus eum qui
-      laboriosam necessitatibus excepturi id assumenda maxime tenetur, in
-      placeat a quas quis consequatur neque nobis, dolor laudantium, aliquam
-      inventore. Deserunt eos dolorum pariatur magni, odio consequatur qui amet
-      nihil sed explicabo cum nesciunt non officia consequuntur. Nobis iusto
-      officiis iure aut neque quisquam veniam, eveniet vel ab quas? Temporibus
-      ducimus ad, quis iste eum tenetur velit, libero repellat, laudantium
-      eligendi cumque itaque repudiandae. Odio minima voluptas explicabo
-      cupiditate facere, molestias provident aspernatur debitis sapiente
-      architecto ea delectus, eum placeat tenetur dolor numquam perspiciatis
-      reiciendis inventore tempora accusantium esse id vel. Rem, sapiente eum
-      adipisci sequi enim in consequuntur, ipsam cupiditate perferendis debitis
-      voluptatibus delectus culpa! Facilis ad praesentium sequi amet magnam
-      consequatur recusandae fugit sapiente.
+      I am a Software Developer and Web Developer. I am primarily focused on
+      Front End Development, due to my background in Human Computer interaction.
+      This encompasses advanced knowledge in UI/UX, Semantic HTML, and Web
+      Accessibility Guidelines. I am also skilled in creating mobile friendly
+      websites through Responsive Web Design, SEO, and optimizing software to
+      reduce time-to-first byte.
+    </p>
+    <p>
+      While Front End Development is my forte, I am no stranger to backend
+      development, having created API routes, developed GraphQL servers,
+      optimized SQL queries and much more.
     </p>
   </div>
 </section>
@@ -101,9 +98,18 @@
     clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
     color: black;
     background-color: white;
+  }
+
+  .title {
+    padding-bottom: 4rem;
 
     > h2 {
       margin: 0;
     }
+  }
+
+  p {
+    max-width: 80ch;
+    line-height: 1.5;
   }
 </style>
