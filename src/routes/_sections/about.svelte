@@ -15,7 +15,7 @@
   $: if (fullyTyped) {
     setTimeout(() => {
       isTyping = false;
-    }, 5000);
+    }, 3000);
   }
 
   function typing(_element: HTMLElement) {
@@ -88,6 +88,7 @@
           <li>University of Alberta, Class of <time>2020</time></li>
           <li>Sociology Minor</li>
           <li>Dean's Honour Roll <time>2020</time></li>
+          <li>CMPUT 250 Game of the Year <time>2017</time></li>
         </ul>
       </div>
     {:else}
@@ -131,8 +132,11 @@
   }
 
   .title {
+    min-height: 300px;
+
     > h2 {
       margin: 0;
+      font-size: 4rem;
     }
   }
 
