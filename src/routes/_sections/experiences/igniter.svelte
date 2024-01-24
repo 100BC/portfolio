@@ -41,11 +41,11 @@
   <ul class="techStack" slot="techStack">
     <li>Ruby on Rails</li>
     <li>JavaScript</li>
-    <li>SQL</li>
+    <li>TypeScript</li>
     <li>jQuery</li>
+    <li>SQL</li>
     <li>HTML</li>
     <li>SCSS</li>
-    <li>TypeScript</li>
     <li>Svelte</li>
     <li>Sveltekit</li>
     <li>React.js</li>

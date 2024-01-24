@@ -1,5 +1,8 @@
 <script lang="ts">
+  import Buddytree from './experiences/buddytree.svelte';
+  import Contract from './experiences/contract.svelte';
   import Igniter from './experiences/igniter.svelte';
+  import Interface from './experiences/interface.svelte';
 
   let cardOpen: string | null = null;
 </script>
@@ -15,12 +18,12 @@
             Igniter Tickets
           </button>
         </li>
-        <li>
+        <li class:selected={cardOpen === 'interface'}>
           <button type="button" on:click={() => (cardOpen = 'interface')}>
             Interface Fluidics
           </button>
         </li>
-        <li>
+        <li class:selected={cardOpen === 'buddytree'}>
           <button type="button" on:click={() => (cardOpen = 'buddytree')}>
             Buddytree
           </button>
@@ -72,6 +75,12 @@
     </ol>
   {:else if cardOpen === 'igniter'}
     <Igniter />
+  {:else if cardOpen === 'interface'}
+    <Interface />
+  {:else if cardOpen === 'buddytree'}
+    <Buddytree />
+  {:else if cardOpen === 'contract'}
+    <Contract />
   {/if}
 </section>
 
