@@ -5,6 +5,7 @@
     "stylelint-config-html/svelte"
   ],
   "rules": {
+    "no-descending-specificity": null,
     "scss/dollar-variable-colon-space-after": "always-single-line",
     "color-function-notation": "legacy",
     "scss/dollar-variable-pattern": "^[a-z][a-zA-Z0-9]+$",

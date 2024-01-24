@@ -1,27 +1,78 @@
+<script lang="ts">
+  import Igniter from './experiences/igniter.svelte';
+
+  let cardOpen: string | null = null;
+</script>
+
 <section aria-label="Work Experience" id="experience" class="fullPage">
   <h2>Work Experience</h2>
-  <ol class="grid">
-    <li>
-      <h3>Igniter Tickets</h3>
-      <i>Software Developer</i>
-      <time>Feb. 2022 - Nov. 2023</time>
-    </li>
-    <li>
-      <h3>Interface Fluidics</h3>
-      <i>Software Developer</i>
-      <time>Oct. 2021 - Jan. 2022</time>
-    </li>
-    <li>
-      <h3>Buddytree</h3>
-      <i>Software Developer</i>
-      <time>Feb. 2021 - Sept 2022</time>
-    </li>
-    <li>
-      <h3>Contract Work</h3>
-      <i>Web Developer</i>
-      <time>2020-present</time>
-    </li>
-  </ol>
+
+  {#if cardOpen}
+    <header aria-label="Work Experience" class="headerNav">
+      <ul>
+        <li class:selected={cardOpen === 'igniter'}>
+          <button type="button" on:click={() => (cardOpen = 'igniter')}>
+            Igniter Tickets
+          </button>
+        </li>
+        <li>
+          <button type="button" on:click={() => (cardOpen = 'interface')}>
+            Interface Fluidics
+          </button>
+        </li>
+        <li>
+          <button type="button" on:click={() => (cardOpen = 'buddytree')}>
+            Buddytree
+          </button>
+        </li>
+        <li>
+          <button type="button" on:click={() => (cardOpen = 'contract')}>
+            Contract
+          </button>
+        </li>
+        <li>
+          <button type="button" on:click={() => (cardOpen = null)}>
+            Close
+          </button>
+        </li>
+      </ul>
+    </header>
+  {/if}
+
+  {#if cardOpen === null}
+    <ol class="grid">
+      <li>
+        <button type="button" on:click={() => (cardOpen = 'igniter')}>
+          <h3>Igniter Tickets</h3>
+          <i>Software Developer</i>
+          <time>Feb. 2022 - Nov. 2023</time>
+        </button>
+      </li>
+      <li>
+        <button type="button" on:click={() => (cardOpen = 'interface')}>
+          <h3>Interface Fluidics</h3>
+          <i>Software Developer</i>
+          <time>Oct. 2021 - Jan. 2022</time>
+        </button>
+      </li>
+      <li>
+        <button type="button" on:click={() => (cardOpen = 'buddytree')}>
+          <h3>Buddytree</h3>
+          <i>Software Developer</i>
+          <time>Feb. 2021 - Sept 2022</time>
+        </button>
+      </li>
+      <li>
+        <button type="button" on:click={() => (cardOpen = 'contract')}>
+          <h3>Contract Work</h3>
+          <i>Web Developer</i>
+          <time>2020-present</time>
+        </button>
+      </li>
+    </ol>
+  {:else if cardOpen === 'igniter'}
+    <Igniter />
+  {/if}
 </section>
 
 <style lang="scss">
@@ -37,32 +88,73 @@
   .grid {
     display: grid;
     grid-template-columns: minmax(200px, 400px) minmax(200px, 400px);
+    gap: 2rem;
     justify-content: center;
     padding-left: 0;
     list-style: none;
 
     > li {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
       min-height: 200px;
-      padding: 2rem;
-      margin: 1rem;
-      color: black;
-      background-color: white;
-      border-radius: 10px;
 
-      > h3 {
-        margin: 0;
-        font-size: 2.4rem;
+      > button {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        height: 100%;
+        min-height: 200px;
+        padding: 2rem;
+        color: black;
+        text-align: start;
+        background: 0;
+        background-color: white;
+        border-radius: 10px;
+
+        > h3 {
+          margin: 0;
+          font-size: 2.4rem;
+        }
+
+        > i {
+          font-size: 2rem;
+        }
+
+        &:hover {
+          transform: translate(2px, 2px);
+        }
       }
+    }
+  }
 
-      > i {
-        font-size: 2rem;
-      }
+  .headerNav {
+    max-width: 90%;
+    margin: auto;
 
-      &:hover {
-        transform: translate(2px, 2px);
+    > ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding-left: 0;
+      list-style: none;
+
+      > li {
+        flex: 1 1;
+
+        > button {
+          width: 100%;
+          padding: 1rem;
+          font-weight: bold;
+          color: $theme400;
+          background: none;
+
+          &:hover {
+            color: $theme600;
+          }
+        }
+
+        &.selected {
+          border-bottom: 2px solid $theme400;
+        }
       }
     }
   }
