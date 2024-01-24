@@ -1,4 +1,4 @@
-<section aria-labelledby="name">
+<section aria-labelledby="name" class="fullPage">
   <div>
     <div class="title">
       <div>Hello my name is</div>
@@ -8,7 +8,7 @@
     <nav>
       <h2>Web and Software Developer</h2>
       <ol>
-        <li><a href="#work">About</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#work">Tech Stack</a></li>
         <li><a href="#work">Work Experience</a></li>
         <li><a href="#work">Contact</a></li>
@@ -25,8 +25,6 @@
     gap: 5rem;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100vh;
 
     > img {
       border-radius: 20px;
