@@ -42,19 +42,19 @@
 
   // Peacock
   "workbench.colorCustomizations": {
-    "activityBar.activeBackground": "#ff2e93",
+    "activityBar.activeBackground": "#98c3b0",
     "activityBar.activeBorder": "#2a1816",
-    "activityBar.background": "#ff2e93",
-    "activityBar.foreground": "#000000",
-    "activityBar.inactiveForeground": "#36363699",
-    "activityBarBadge.background": "#6cdf00",
+    "activityBar.background": "#98c3b0",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#9372ad",
     "activityBarBadge.foreground": "#15202b",
-    "titleBar.activeBackground": "#fa0079",
-    "titleBar.activeForeground": "#000000",
-    "titleBar.inactiveBackground": "#fa007999",
-    "titleBar.inactiveForeground": "#36363699",
-    "sash.hoverBorder": "#ff2e93",
-    "commandCenter.border": "#36363699"
+    "titleBar.activeBackground": "#78b097",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveBackground": "#78b09799",
+    "titleBar.inactiveForeground": "#15202b99",
+    "sash.hoverBorder": "#98c3b0",
+    "commandCenter.border": "#15202b99"
   },
-  "peacock.color": "#fa0079"
+  "peacock.color": "#78b097"
 }
