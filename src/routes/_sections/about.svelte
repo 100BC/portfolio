@@ -57,14 +57,14 @@
 <section aria-label="about" class="fullPage" id="about">
   <div class="left">
     <div class="title">
-      <div>I am a</div>
+      <div class="prefix">I am a</div>
       <h2 aria-label="Software Developer">
         <span use:typing>{titleText}</span><span use:blinking>|</span>
         <noscript>Software Developer</noscript>
       </h2>
     </div>
   </div>
-  <div>
+  <div class="right">
     <div class="buttons">
       <button
         type="button"
@@ -114,10 +114,16 @@
 <style lang="scss">
   section {
     display: grid;
-    grid-template-columns: minmax(180px, 30%) 1fr;
+    grid-template-columns: 20ch 1.8fr;
     gap: 2rem;
     align-items: center;
     padding-right: 2rem;
+    font-size: 3.5rem;
+  }
+
+  .left,
+  .right {
+    font-size: 1.6rem;
   }
 
   .left {
@@ -132,11 +138,13 @@
   }
 
   .title {
-    min-height: 300px;
-
     > h2 {
       margin: 0;
-      font-size: 4rem;
+      font-size: 3rem;
+    }
+
+    > .prefix {
+      font-size: 1.6rem;
     }
   }
 
@@ -179,7 +187,38 @@
     }
   }
 
-  .tabContent {
+  .right {
+    width: 100%;
+  }
+
+  .tabContent,
+  .title {
     min-height: 300px;
+  }
+
+  @media screen and (width <= $tablet) {
+    section {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+    }
+
+    .tabContent,
+    .title {
+      min-height: initial;
+    }
+
+    .title > h2 {
+      font-size: 3rem;
+    }
+
+    .left {
+      width: 100%;
+      clip-path: initial;
+    }
+
+    .right {
+      padding: 0 2rem;
+    }
   }
 </style>
