@@ -76,10 +76,12 @@
       <button type="submit">Message</button>
     </form>
   {/if}
+  <a href="." class="link">Back to top</a>
 </section>
 
 <style lang="scss">
   section {
+    position: relative;
     padding: 4rem;
   }
 
@@ -144,5 +146,18 @@
     font-size: 1.8rem;
     color: black;
     background-color: $theme300;
+  }
+
+  .link {
+    position: absolute;
+    right: 0;
+    bottom: 4rem;
+    left: 0;
+    width: fit-content;
+    margin: auto;
+    font-size: 3rem;
+    font-weight: bold;
+    color: $theme400;
+    text-decoration: underline;
   }
 </style>
