@@ -142,7 +142,7 @@
       list-style: none;
 
       > li {
-        flex: 1 1;
+        flex: 1;
         border-radius: $borderRadius;
         transition: background-color 1s;
 
