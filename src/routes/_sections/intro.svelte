@@ -15,12 +15,12 @@
       <ul class="externalLinks">
         <li>
           <a href="https://www.linkedin.com/in/otman-dev/">
-            <img src={linkedIn} alt="LinkedIn" />
+            <img src={linkedIn} alt="LinkedIn" width="26" height="26" />
           </a>
         </li>
         <li>
           <a href="https://github.com/100BC">
-            <img src={github} alt="GitHub" />
+            <img src={github} alt="GitHub" width="26" height="26" />
           </a>
         </li>
       </ul>
@@ -35,7 +35,7 @@
       </ol>
     </nav>
   </div>
-  <img src={otman} alt="Otman Maoued" />
+  <img src={otman} alt="Otman Maoued" width="256" height="256" />
 </section>
 
 <style lang="scss">
