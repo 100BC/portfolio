@@ -1,3 +1,7 @@
+<script lang="ts">
+  import { frameworks, languages, libraries, services, skills } from './skills';
+</script>
+
 <section class="fullPage" aria-labelledby="techStack" id="skills">
   <h2 id="techStack">Skills and Tech Stack</h2>
 
@@ -5,56 +9,41 @@
     <div>
       <h3>Frameworks</h3>
       <ul>
-        <li>Next.js</li>
-        <li>Sveltekit</li>
-        <li>Ruby on Rails</li>
+        {#each frameworks as fw}
+          <li>{fw}</li>
+        {/each}
       </ul>
     </div>
     <div>
       <h3>Libraries</h3>
       <ul>
-        <li>React.js</li>
-        <li>Svelte</li>
-        <li>Redux</li>
-        <li>Material UI</li>
+        {#each libraries as lib}
+          <li>{lib}</li>
+        {/each}
       </ul>
     </div>
     <div>
       <h3>Languages</h3>
       <ul>
-        <li>JavaScript</li>
-        <li>TypeScript</li>
-        <li>Ruby</li>
-        <li>SQL</li>
-        <li>NoSQL</li>
-        <li>GraphQL</li>
-        <li>Python</li>
-        <li>HTML5</li>
-        <li>CSS3</li>
-        <li>SCSS</li>
+        {#each languages as lang}
+          <li>{lang}</li>
+        {/each}
       </ul>
     </div>
     <div>
       <h3>Services</h3>
       <ul>
-        <li>Linux</li>
-        <li>Node.js</li>
-        <li>NGINX</li>
-        <li>Github Actions</li>
-        <li>Gitlab CI/CD</li>
-        <li>Cloudinary</li>
-        <li>Firebase</li>
+        {#each services as sv}
+          <li>{sv}</li>
+        {/each}
       </ul>
     </div>
     <div>
       <h3>Skills</h3>
       <ul>
-        <li>UI/UX</li>
-        <li>Software Optimization</li>
-        <li>Search Engine Optimization (SEO)</li>
-        <li>Responsive Web Design</li>
-        <li>Progressive Web Apps</li>
-        <li>Web Content Accessibility Guidelines (WCAG)</li>
+        {#each skills as sk}
+          <li>{sk}</li>
+        {/each}
       </ul>
     </div>
   </div>
@@ -66,7 +55,7 @@
   }
 
   h2 {
-    font-size: 3rem;
+    font-size: 5rem;
     text-align: center;
   }
 
