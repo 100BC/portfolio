@@ -40,6 +40,7 @@
   </ul>
   <ul class="techStack" slot="techStack">
     <li>Ruby on Rails</li>
+    <li>rspec</li>
     <li>JavaScript</li>
     <li>TypeScript</li>
     <li>jQuery</li>
@@ -50,6 +51,7 @@
     <li>Sveltekit</li>
     <li>React.js</li>
     <li>Docker</li>
+    <li>Gitlab CI/CD</li>
     <li>Google Cloud Platform</li>
   </ul>
 </WorkExperience>
