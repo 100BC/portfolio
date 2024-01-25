@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { frameworks, languages, libraries, services, skills } from './skills';
+  import { frameworks, languages, services, skills } from './skills';
 </script>
 
 <section class="fullPage" aria-labelledby="techStack" id="skills">
@@ -7,21 +7,14 @@
 
   <div class="container">
     <div>
-      <h3>Frameworks</h3>
+      <h3>Frameworks & Libraries</h3>
       <ul>
         {#each frameworks as fw}
           <li>{fw}</li>
         {/each}
       </ul>
     </div>
-    <div>
-      <h3>Libraries</h3>
-      <ul>
-        {#each libraries as lib}
-          <li>{lib}</li>
-        {/each}
-      </ul>
-    </div>
+
     <div>
       <h3>Languages</h3>
       <ul>
@@ -31,18 +24,18 @@
       </ul>
     </div>
     <div>
-      <h3>Services</h3>
-      <ul>
-        {#each services as sv}
-          <li>{sv}</li>
-        {/each}
-      </ul>
-    </div>
-    <div>
       <h3>Skills</h3>
       <ul>
         {#each skills as sk}
           <li>{sk}</li>
+        {/each}
+      </ul>
+    </div>
+    <div>
+      <h3>Services</h3>
+      <ul>
+        {#each services as sv}
+          <li>{sv}</li>
         {/each}
       </ul>
     </div>

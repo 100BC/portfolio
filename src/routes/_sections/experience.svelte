@@ -12,7 +12,7 @@
 </script>
 
 <section aria-label="Work Experience" id="experience" class="fullPage">
-  <h2>Work Experience</h2>
+  <h2 class:small={!!cardOpen}>Work Experience</h2>
 
   {#if cardOpen}
     <header
@@ -22,6 +22,9 @@
       out:fade={{ duration: 200 }}
     >
       <ul>
+        <li>
+          <a href=".#experience">Card View</a>
+        </li>
         <li class:selected={cardOpen === 'igniter'}>
           <a href="?exp=igniter#experience">Igniter Tickets</a>
         </li>
@@ -33,9 +36,6 @@
         </li>
         <li class:selected={cardOpen === 'contract'}>
           <a href="?exp=contract#experience">Contract</a>
-        </li>
-        <li>
-          <a href=".#experience">Card View</a>
         </li>
       </ul>
     </header>
@@ -51,11 +51,11 @@
         on:change={() =>
           goto(cardOpen ? `?exp=${cardOpen}#experience` : '.#experience')}
       >
+        <option value={null}>Card View</option>
         <option value="igniter"> Igniter Tickets </option>
         <option value="interface"> Interface Fluidics </option>
         <option value="buddytree">Buddytree</option>
         <option value="contract">Contract</option>
-        <option value={null}>Card View</option>
       </select>
     </header>
   {/if}
@@ -182,6 +182,11 @@
     .grid {
       display: flex;
       flex-direction: column;
+    }
+
+    .small {
+      font-size: 2rem;
+      text-align: start;
     }
 
     .headerNav {

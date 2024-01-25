@@ -1,5 +1,14 @@
-export const frameworks = ['Next.js', 'Sveltekit', 'Ruby on Rails'];
-export const libraries = ['React.js', 'Svelte', 'Redux', 'Material UI'];
+export const frameworks = [
+  'Next.js',
+  'React.js',
+  'Ruby on Rails',
+  'Sveltekit',
+  'Svelte',
+  'Redux',
+  'Material UI',
+  'RSpec',
+];
+
 export const languages = [
   'JavaScript',
   'TypeScript',
