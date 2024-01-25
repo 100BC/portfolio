@@ -1,5 +1,5 @@
-<section class="fullPage" aria-labelledby="skills">
-  <h2 id="skills">Skills and Tech Stack</h2>
+<section class="fullPage" aria-labelledby="techStack" id="skills">
+  <h2 id="techStack">Skills and Tech Stack</h2>
 
   <div class="container">
     <div>
