@@ -106,6 +106,7 @@
           development, having created API routes, developed GraphQL servers,
           optimized SQL queries and much more.
         </p>
+        <p>I am currently based in Toronto, ON.</p>
       </div>
     {/if}
   </div>
