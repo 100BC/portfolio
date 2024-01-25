@@ -126,6 +126,10 @@
     &:hover {
       background-color: $theme600;
     }
+
+    &:focus-visible {
+      outline: 2px solid white;
+    }
   }
 
   .spinner {

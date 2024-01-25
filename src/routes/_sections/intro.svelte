@@ -94,5 +94,11 @@
     gap: 2rem;
     padding: 0;
     list-style: none;
+
+    a {
+      display: block;
+      width: 26px;
+      height: 26px;
+    }
   }
 </style>

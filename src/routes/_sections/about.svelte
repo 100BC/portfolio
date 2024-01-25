@@ -164,6 +164,10 @@
       &:hover {
         color: $theme600;
       }
+
+      &:focus-visible {
+        outline: 3px solid;
+      }
     }
 
     .selected {
