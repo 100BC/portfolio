@@ -213,7 +213,7 @@
     }
 
     .title > h2 {
-      font-size: 3rem;
+      font-size: 3.5rem;
     }
 
     .left {
@@ -223,6 +223,11 @@
 
     .right {
       padding: 0 2rem;
+    }
+
+    p,
+    .education > ul {
+      font-size: 2.4rem;
     }
   }
 </style>

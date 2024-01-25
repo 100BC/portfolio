@@ -119,7 +119,7 @@
     min-width: 140px;
     padding: 1rem;
     font-weight: bold;
-    color: #000;
+    color: $white;
     background-color: $purple;
     border-radius: $borderRadius;
 
@@ -166,6 +166,12 @@
 
     &:hover {
       color: $green;
+    }
+  }
+
+  @media screen and (width <= $tablet) {
+    section {
+      font-size: 2rem;
     }
   }
 </style>

@@ -102,4 +102,10 @@
       height: 26px;
     }
   }
+
+  @media screen and (width <= $tablet) {
+    section {
+      font-size: 2rem;
+    }
+  }
 </style>

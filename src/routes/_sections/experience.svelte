@@ -197,7 +197,7 @@
         margin: 0 0 2rem;
         font-size: 2rem;
         font-weight: bold;
-        color: rgb(0, 0, 0);
+        color: $white;
         text-align: center;
         background-color: $purple;
         border: 0;
