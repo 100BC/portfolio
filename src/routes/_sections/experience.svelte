@@ -35,7 +35,7 @@
           <a href="?exp=contract#experience">Contract</a>
         </li>
         <li>
-          <a href=".#experience">Back</a>
+          <a href=".#experience">Card View</a>
         </li>
       </ul>
     </header>
@@ -55,7 +55,7 @@
         <option value="interface"> Interface Fluidics </option>
         <option value="buddytree">Buddytree</option>
         <option value="contract">Contract</option>
-        <option value={null}>Back</option>
+        <option value={null}>Card View</option>
       </select>
     </header>
   {/if}
@@ -167,7 +167,7 @@
           background-color: $theme400;
 
           > a {
-            color: #fff;
+            color: #000;
           }
         }
       }
@@ -197,7 +197,7 @@
         margin: 0 0 2rem;
         font-size: 2rem;
         font-weight: bold;
-        color: white;
+        color: rgb(0, 0, 0);
         text-align: center;
         background-color: $theme400;
         border: 0;

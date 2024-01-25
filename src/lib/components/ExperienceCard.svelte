@@ -21,15 +21,12 @@
     padding: 2rem;
     color: black;
     text-align: start;
-    background: 0;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 10px #fff;
 
     &:hover {
       @include linearGradient(45deg);
-
-      color: white;
 
       > h3 {
         font-size: 3rem;
