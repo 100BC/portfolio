@@ -11,7 +11,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Work Experience</a></li>
         <li><a href="#skills">Skills & Tech Stack</a></li>
-        <li><a href="#work">Contact</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ol>
     </nav>
   </div>
