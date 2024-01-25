@@ -35,7 +35,7 @@
           <a href="?exp=contract#experience">Contract</a>
         </li>
         <li>
-          <a href=".#experience">Close</a>
+          <a href=".#experience">Back</a>
         </li>
       </ul>
     </header>
@@ -55,12 +55,12 @@
         <option value="interface"> Interface Fluidics </option>
         <option value="buddytree">Buddytree</option>
         <option value="contract">Contract</option>
-        <option value={null}>Close</option>
+        <option value={null}>Back</option>
       </select>
     </header>
   {/if}
 
-  {#if cardOpen === null}
+  {#if !cardOpen}
     <ol class="grid" out:scale={{ duration: 200 }} in:scale={{ delay: 200 }}>
       <li>
         <ExperienceCard href="?exp=igniter#experience">
