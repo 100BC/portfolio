@@ -35,7 +35,7 @@
     text-decoration: underline;
 
     &:hover {
-      color: $green;
+      color: $darkGreen;
     }
   }
 </style>

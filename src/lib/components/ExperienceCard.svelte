@@ -29,6 +29,8 @@
     &:focus-visible {
       @include linearGradient(45deg);
 
+      color: $white;
+
       > h3 {
         font-size: 3rem;
       }
