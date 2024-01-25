@@ -133,7 +133,7 @@
     height: 100%;
     padding: 2rem 4rem 2rem 2rem;
     clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
-    color: black;
+    color: $black;
     background-color: white;
   }
 
@@ -158,11 +158,11 @@
     > button {
       font-size: 2.4rem;
       font-weight: bold;
-      color: $theme400;
+      color: $purple;
       background: none;
 
       &:hover {
-        color: $theme600;
+        color: $green;
       }
 
       &:focus-visible {

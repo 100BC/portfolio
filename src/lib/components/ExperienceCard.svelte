@@ -19,7 +19,7 @@
     height: 100%;
     min-height: 15rem;
     padding: 2rem;
-    color: black;
+    color: $black;
     text-align: start;
     background-color: white;
     border-radius: 10px;

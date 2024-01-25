@@ -75,7 +75,7 @@
       > li {
         width: fit-content;
         margin-top: 2rem;
-        color: $theme400;
+        color: $purple;
         text-decoration: underline;
 
         &:first-of-type {
@@ -83,7 +83,7 @@
         }
 
         &:hover {
-          color: $theme500;
+          color: $green;
         }
       }
     }

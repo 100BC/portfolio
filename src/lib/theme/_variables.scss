@@ -1,12 +1,10 @@
-@use './colors' as *;
-
 $borderRadius: 10px;
 
 @mixin linearGradient($deg: 90deg) {
   background-image: linear-gradient(
     $deg,
-    $theme400 0%,
-    $theme500 60%,
-    $theme600 100%
+    #fa0079 0%,
+    #ef00fa 60%,
+    #9d00fa 100%
   );
 }

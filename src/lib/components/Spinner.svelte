@@ -9,7 +9,7 @@
     width: 50px;
     aspect-ratio: 1;
     padding: 8px;
-    background: $theme400;
+    background: $purple;
     border-radius: 50%;
     mask: $var;
     mask-composite: source-out;

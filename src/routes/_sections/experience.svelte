@@ -154,17 +154,17 @@
           height: 100%;
           padding: 1rem;
           font-weight: bold;
-          color: $theme400;
+          color: $purple;
           text-align: center;
           background: none;
 
           &:hover {
-            color: $theme600;
+            color: $green;
           }
         }
 
         &.selected {
-          background-color: $theme400;
+          background-color: $purple;
 
           > a {
             color: #000;
@@ -199,7 +199,7 @@
         font-weight: bold;
         color: rgb(0, 0, 0);
         text-align: center;
-        background-color: $theme400;
+        background-color: $purple;
         border: 0;
         border-radius: $borderRadius;
       }

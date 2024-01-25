@@ -81,7 +81,7 @@
 
       > h3 {
         margin-bottom: 0;
-        border-bottom: 2px solid $theme400;
+        border-bottom: 2px solid $purple;
       }
 
       > ul > li {

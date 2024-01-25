@@ -105,7 +105,7 @@
     border: 0;
 
     &:focus-within {
-      outline: 2px solid $theme400;
+      outline: 2px solid $purple;
     }
   }
 
@@ -120,11 +120,11 @@
     padding: 1rem;
     font-weight: bold;
     color: #000;
-    background-color: $theme400;
+    background-color: $purple;
     border-radius: $borderRadius;
 
     &:hover {
-      background-color: $theme600;
+      background-color: $green;
     }
 
     &:focus-visible {
@@ -141,15 +141,15 @@
   .submitted {
     display: block;
     font-size: 2.4rem;
-    color: greenyellow;
+    color: $green;
     text-align: center;
   }
 
   .error {
     padding: 1rem;
     font-size: 1.8rem;
-    color: black;
-    background-color: $theme300;
+    color: $black;
+    background-color: $red;
   }
 
   .link {
@@ -161,11 +161,11 @@
     margin: auto;
     font-size: 3rem;
     font-weight: bold;
-    color: $theme400;
+    color: $purple;
     text-decoration: underline;
 
     &:hover {
-      color: $theme600;
+      color: $green;
     }
   }
 </style>

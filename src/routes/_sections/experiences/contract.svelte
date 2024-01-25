@@ -31,11 +31,11 @@
 
 <style lang="scss">
   a {
-    color: $theme400;
+    color: $purple;
     text-decoration: underline;
 
     &:hover {
-      color: $theme600;
+      color: $green;
     }
   }
 </style>
