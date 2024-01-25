@@ -24,6 +24,17 @@
     color: #000;
     background-color: #fff;
     border-radius: $borderRadius;
+
+    > h3 {
+      margin-top: 0;
+      font-size: 2.4rem;
+    }
+
+    > h4 {
+      display: inline-block;
+      margin: 0;
+      font-size: 2rem;
+    }
   }
 
   :global(ul.tasks) {
@@ -36,15 +47,13 @@
   :global(ul.techStack) {
     display: flex;
     flex-wrap: wrap;
-    gap: 1ch;
+    gap: 0.8ch;
     padding: 0;
     list-style: none;
 
     > :global(li) {
-      &:not(:last-of-type) {
-        &::after {
-          content: ' |';
-        }
+      &:not(:last-of-type)::after {
+        content: ' |';
       }
     }
   }

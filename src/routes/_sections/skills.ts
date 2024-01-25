@@ -7,6 +7,7 @@ export const frameworks = [
   'Redux',
   'Material UI',
   'RSpec',
+  'CouchDB',
 ];
 
 export const languages = [
@@ -29,6 +30,7 @@ export const services = [
   'Gitlab CI/CD',
   'Cloudinary',
   'Firebase',
+  'Google Cloud Platform',
 ];
 export const skills = [
   'UI/UX',

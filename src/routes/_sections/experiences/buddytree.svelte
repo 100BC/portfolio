@@ -1,5 +1,7 @@
 <script lang="ts">
   import WorkExperience from '$lib/components/WorkExperience.svelte';
+
+  const techStack = ['React.js', 'Next.js', 'TypeScript', 'JSX', 'SCSS'];
 </script>
 
 <WorkExperience>
@@ -19,10 +21,8 @@
     </li>
   </ul>
   <ul class="techStack" slot="techStack">
-    <li>React.js</li>
-    <li>Next.js</li>
-    <li>TypeScript</li>
-    <li>JSX</li>
-    <li>SCSS</li>
+    {#each techStack as tech}
+      <li>{tech}</li>
+    {/each}
   </ul>
 </WorkExperience>

@@ -1,5 +1,24 @@
 <script lang="ts">
   import WorkExperience from '$lib/components/WorkExperience.svelte';
+
+  const techStack = [
+    'Ruby on Rails',
+    'JavaScript',
+    'TypeScript',
+    'jQuery',
+    'CouchDB',
+    'SQL',
+    'RSpec',
+    'HTML',
+    'SCSS',
+    'Svelte',
+    'Sveltekit',
+    'CouchDB',
+    'React.js',
+    'Docker',
+    'Gitlab CI/CD',
+    'Google Cloud Platform',
+  ];
 </script>
 
 <WorkExperience>
@@ -39,19 +58,8 @@
     </li>
   </ul>
   <ul class="techStack" slot="techStack">
-    <li>Ruby on Rails</li>
-    <li>rspec</li>
-    <li>JavaScript</li>
-    <li>TypeScript</li>
-    <li>jQuery</li>
-    <li>SQL</li>
-    <li>HTML</li>
-    <li>SCSS</li>
-    <li>Svelte</li>
-    <li>Sveltekit</li>
-    <li>React.js</li>
-    <li>Docker</li>
-    <li>Gitlab CI/CD</li>
-    <li>Google Cloud Platform</li>
+    {#each techStack as tech}
+      <li>{tech}</li>
+    {/each}
   </ul>
 </WorkExperience>
