@@ -1,3 +1,8 @@
+<script lang="ts">
+  import linkedIn from '$lib/images/LinkedIn.png';
+  import github from '$lib/images/Github.png';
+</script>
+
 <section aria-labelledby="name" class="fullPage">
   <div>
     <div class="title">
@@ -5,7 +10,21 @@
       <h1 id="name">Otman Maoued</h1>
       <i>(ot-man maow-WED)</i>
     </div>
-    <nav>
+    <nav aria-label="external">
+      <ul class="externalLinks">
+        <li>
+          <a href="https://www.linkedin.com/in/otman-dev/">
+            <img src={linkedIn} alt="LinkedIn" />
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/100BC">
+            <img src={github} alt="GitHub" />
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <nav class="internalNav" aria-label="internal">
       <h2>Web and Software Developer</h2>
       <ol>
         <li><a href="#about">About</a></li>
@@ -47,7 +66,7 @@
     }
   }
 
-  nav {
+  .internalNav {
     > h2 {
       margin-bottom: 0;
     }
@@ -68,5 +87,12 @@
         }
       }
     }
+  }
+
+  .externalLinks {
+    display: flex;
+    gap: 2rem;
+    padding: 0;
+    list-style: none;
   }
 </style>
