@@ -1,6 +1,7 @@
 <script lang="ts">
   import linkedIn from '$lib/images/LinkedIn.png';
   import github from '$lib/images/Github.png';
+  import otman from '$lib/images/otman.webp';
 </script>
 
 <section aria-labelledby="name" class="fullPage">
@@ -34,7 +35,7 @@
       </ol>
     </nav>
   </div>
-  <img src="/images/otman.webp" alt="Otman Maoued" />
+  <img src={otman} alt="Otman Maoued" />
 </section>
 
 <style lang="scss">
