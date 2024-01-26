@@ -9,6 +9,12 @@
   import { goto } from '$app/navigation';
 
   $: cardOpen = $page.url.searchParams.get('exp');
+
+  const baseUrl = '.#experience';
+  const igniterUrl = '?exp=igniter#experience';
+  const interfaceUrl = '?exp=interface#experience';
+  const buddytreeUrl = '?exp=buddytree#experience';
+  const contractUrl = '?exp=contract#experience';
 </script>
 
 <section aria-label="Work Experience" id="experience" class="fullPage">
@@ -17,53 +23,56 @@
   {#if cardOpen}
     <header
       aria-label="Work Experience"
-      class="headerNav"
       in:fade={{ delay: 200 }}
       out:fade={{ duration: 200 }}
     >
-      <ul>
+      <ul class="headerNav">
         <li>
-          <a href=".#experience">Card View</a>
+          <a href={baseUrl}>Card View</a>
         </li>
         <li class:selected={cardOpen === 'igniter'}>
-          <a href="?exp=igniter#experience">Igniter Tickets</a>
+          <a href={igniterUrl}>Igniter Tickets</a>
         </li>
         <li class:selected={cardOpen === 'interface'}>
-          <a href="?exp=interface#experience">Interface Fluidics</a>
+          <a href={interfaceUrl}>Interface Fluidics</a>
         </li>
         <li class:selected={cardOpen === 'buddytree'}>
-          <a href="?exp=buddytree#experience">Buddytree</a>
+          <a href={buddytreeUrl}>Buddytree</a>
         </li>
         <li class:selected={cardOpen === 'contract'}>
-          <a href="?exp=contract#experience">Contract</a>
+          <a href={contractUrl}>Contract</a>
         </li>
       </ul>
-    </header>
-    <header
-      class="headerSelect"
-      in:fade={{ delay: 200 }}
-      out:fade={{ duration: 200 }}
-    >
-      <label for="select">Filter:</label>
-      <select
-        bind:value={cardOpen}
-        id="select"
-        on:change={() =>
-          goto(cardOpen ? `?exp=${cardOpen}#experience` : '.#experience')}
-      >
-        <option value={null}>Card View</option>
-        <option value="igniter"> Igniter Tickets </option>
-        <option value="interface"> Interface Fluidics </option>
-        <option value="buddytree">Buddytree</option>
-        <option value="contract">Contract</option>
-      </select>
+      <div class="headerSelect">
+        <label for="select">Filter:</label>
+        <select
+          bind:value={cardOpen}
+          id="select"
+          on:change={() =>
+            goto(cardOpen ? `?exp=${cardOpen}#experience` : baseUrl)}
+        >
+          <option value={null}>Card View</option>
+          <option value="igniter"> Igniter Tickets </option>
+          <option value="interface"> Interface Fluidics </option>
+          <option value="buddytree">Buddytree</option>
+          <option value="contract">Contract</option>
+        </select>
+      </div>
     </header>
   {/if}
 
-  {#if !cardOpen}
+  {#if cardOpen === 'igniter'}
+    <Igniter />
+  {:else if cardOpen === 'interface'}
+    <Interface />
+  {:else if cardOpen === 'buddytree'}
+    <Buddytree />
+  {:else if cardOpen === 'contract'}
+    <Contract />
+  {:else}
     <ol class="grid" out:scale={{ duration: 200 }} in:scale={{ delay: 200 }}>
       <li>
-        <ExperienceCard href="?exp=igniter#experience">
+        <ExperienceCard href={igniterUrl}>
           <svelte:fragment slot="title">Igniter Tickets</svelte:fragment>
           <svelte:fragment slot="role">Software Developer</svelte:fragment>
           <svelte:fragment slot="duration">
@@ -72,7 +81,7 @@
         </ExperienceCard>
       </li>
       <li>
-        <ExperienceCard href="?exp=interface#experience">
+        <ExperienceCard href={interfaceUrl}>
           <svelte:fragment slot="title">Interface Fluidics</svelte:fragment>
           <svelte:fragment slot="role">React Developer</svelte:fragment>
           <svelte:fragment slot="duration">
@@ -81,7 +90,7 @@
         </ExperienceCard>
       </li>
       <li>
-        <ExperienceCard href="?exp=buddytree#experience">
+        <ExperienceCard href={buddytreeUrl}>
           <svelte:fragment slot="title">Buddytree</svelte:fragment>
           <svelte:fragment slot="role">Software Developer</svelte:fragment>
           <svelte:fragment slot="duration">
@@ -90,21 +99,13 @@
         </ExperienceCard>
       </li>
       <li>
-        <ExperienceCard href="?exp=contract#experience">
+        <ExperienceCard href={contractUrl}>
           <svelte:fragment slot="title">Contract Work</svelte:fragment>
           <svelte:fragment slot="role">Web Developer</svelte:fragment>
           <svelte:fragment slot="duration">2020-present</svelte:fragment>
         </ExperienceCard>
       </li>
     </ol>
-  {:else if cardOpen === 'igniter'}
-    <Igniter />
-  {:else if cardOpen === 'interface'}
-    <Interface />
-  {:else if cardOpen === 'buddytree'}
-    <Buddytree />
-  {:else if cardOpen === 'contract'}
-    <Contract />
   {/if}
 </section>
 
@@ -123,15 +124,15 @@
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     justify-content: center;
-    max-width: 800px;
+    max-width: $tablet;
     padding-left: 0;
     margin: auto;
     list-style: none;
   }
 
-  .headerNav {
+  header {
     width: 100ch;
-    max-width: 90%;
+    max-width: 100%;
     margin: auto;
 
     > ul {
@@ -187,7 +188,7 @@
     }
 
     .small {
-      font-size: 2rem;
+      font-size: 3rem;
       text-align: start;
     }
 

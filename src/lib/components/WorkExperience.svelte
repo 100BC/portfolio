@@ -53,6 +53,7 @@
 
     > :global(li) {
       &:not(:last-of-type)::after {
+        color: $purple;
         content: ' |';
       }
     }
