@@ -7,7 +7,7 @@
 </script>
 
 <div class="container">
-  <button type="button" on:click={() => handleOpen()}>
+  <button type="button" on:click={() => handleOpen()} class:isOpen>
     <h3><slot /></h3>
     <div class="arrow">
       {#if isOpen}
@@ -32,23 +32,23 @@
     flex-direction: column;
     max-width: $laptop;
     margin: auto;
-    border: 1px solid $purple;
-
-    &:not(:last-of-type) {
-      border-bottom: 0;
-    }
   }
 
   button {
     position: relative;
-    color: $black;
-    background-color: $white;
+    background: none;
+    border: 1px solid $purple;
 
     &:hover {
       @include linearGradient;
 
       color: $white;
     }
+  }
+
+  .isOpen {
+    color: black;
+    background-color: $purple;
   }
 
   .arrow {
