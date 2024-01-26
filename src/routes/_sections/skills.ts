@@ -8,6 +8,8 @@ export const frameworks = [
   'Material UI',
   'RSpec',
   'CouchDB',
+  'Node.js',
+  'Express.js',
 ];
 
 export const languages = [
@@ -24,7 +26,6 @@ export const languages = [
 ];
 export const services = [
   'Linux',
-  'Node.js',
   'NGINX',
   'Github Actions',
   'Gitlab CI/CD',
