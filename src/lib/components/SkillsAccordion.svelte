@@ -7,13 +7,19 @@
 </script>
 
 <div class="container">
-  <button type="button" on:click={() => handleOpen()} class:isOpen>
+  <button
+    type="button"
+    on:click={() => handleOpen()}
+    class:isOpen
+    aria-expanded={isOpen}
+    disabled={isOpen}
+  >
     <h3><slot /></h3>
     <div class="arrow">
       {#if isOpen}
-        ▲
+        -
       {:else}
-        ▼
+        +
       {/if}
     </div>
   </button>
@@ -39,7 +45,8 @@
     background: none;
     border: 1px solid $purple;
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       @include linearGradient;
 
       color: $white;
@@ -56,6 +63,7 @@
     top: 50%;
     right: 10px;
     margin: auto 0;
+    font-size: 4rem;
     transform: translateY(-50%);
   }
 
