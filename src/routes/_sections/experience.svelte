@@ -21,11 +21,7 @@
   <h2 class:small={!!cardOpen}>Work Experience</h2>
 
   {#if cardOpen}
-    <header
-      aria-label="Work Experience"
-      in:fade={{ delay: 200 }}
-      out:fade={{ duration: 200 }}
-    >
+    <header aria-label="Work Experience" in:fade={{ delay: 200 }}>
       <ul class="headerNav">
         <li>
           <a href={baseUrl}>Card View</a>
@@ -190,6 +186,7 @@
     .small {
       font-size: 3rem;
       text-align: start;
+      transition: font-size 200ms;
     }
 
     .headerNav {
