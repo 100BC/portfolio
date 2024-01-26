@@ -139,11 +139,13 @@
       flex-wrap: wrap;
       justify-content: space-around;
       padding-left: 0;
+      margin-bottom: 0;
       list-style: none;
 
       > li {
         flex: 1;
-        border-radius: $borderRadius;
+        border-top-left-radius: $borderRadius;
+        border-top-right-radius: $borderRadius;
         transition: background-color 1s;
 
         > a {
@@ -167,7 +169,7 @@
           background-color: $purple;
 
           > a {
-            color: #000;
+            color: $black;
           }
         }
       }
