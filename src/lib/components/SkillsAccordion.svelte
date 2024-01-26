@@ -38,6 +38,10 @@
     flex-direction: column;
     max-width: $laptop;
     margin: auto;
+
+    &:not(:last-of-type) > button {
+      border-bottom: none;
+    }
   }
 
   button {
