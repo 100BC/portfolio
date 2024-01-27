@@ -46,10 +46,7 @@
     gap: 5rem;
     place-content: center center;
     align-items: center;
-
-    > div {
-      padding: 0 2rem;
-    }
+    padding: 2rem;
 
     > img {
       width: 256px;
