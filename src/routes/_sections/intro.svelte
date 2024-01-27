@@ -47,6 +47,10 @@
     place-content: center center;
     align-items: center;
 
+    > div {
+      padding: 0 2rem;
+    }
+
     > img {
       width: 256px;
       height: 256px;
