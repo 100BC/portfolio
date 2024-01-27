@@ -5,10 +5,9 @@
   import Contract from './experiences/contract.svelte';
   import Igniter from './experiences/igniter.svelte';
   import Interface from './experiences/interface.svelte';
-  import { page } from '$app/stores';
   import { goto } from '$app/navigation';
 
-  $: cardOpen = $page.url.searchParams.get('exp');
+  export let urlParam: string | null;
 
   const baseUrl = '.#experience';
   const igniterUrl = '?exp=igniter#experience';
@@ -18,34 +17,38 @@
 </script>
 
 <section aria-label="Work Experience" id="experience" class="fullPage">
-  <h2 class:small={!!cardOpen}>Work Experience</h2>
+  <h2 class:small={!!urlParam}>Work Experience</h2>
 
-  {#if cardOpen}
-    <header aria-label="Work Experience" in:fade={{ delay: 200 }}>
+  {#if urlParam}
+    <header
+      aria-label="Work Experience"
+      in:fade={{ delay: 200 }}
+      out:fade={{ duration: 200 }}
+    >
       <ul class="headerNav">
         <li>
           <a href={baseUrl}>Card View</a>
         </li>
-        <li class:selected={cardOpen === 'igniter'}>
+        <li class:selected={urlParam === 'igniter'}>
           <a href={igniterUrl}>Igniter Tickets</a>
         </li>
-        <li class:selected={cardOpen === 'interface'}>
+        <li class:selected={urlParam === 'interface'}>
           <a href={interfaceUrl}>Interface Fluidics</a>
         </li>
-        <li class:selected={cardOpen === 'buddytree'}>
+        <li class:selected={urlParam === 'buddytree'}>
           <a href={buddytreeUrl}>Buddytree</a>
         </li>
-        <li class:selected={cardOpen === 'contract'}>
+        <li class:selected={urlParam === 'contract'}>
           <a href={contractUrl}>Contract</a>
         </li>
       </ul>
       <div class="headerSelect">
         <label for="select">Filter:</label>
         <select
-          bind:value={cardOpen}
+          bind:value={urlParam}
           id="select"
           on:change={() =>
-            goto(cardOpen ? `?exp=${cardOpen}#experience` : baseUrl)}
+            goto(urlParam ? `?exp=${urlParam}#experience` : baseUrl)}
         >
           <option value={null}>Card View</option>
           <option value="igniter"> Igniter Tickets </option>
@@ -57,13 +60,13 @@
     </header>
   {/if}
 
-  {#if cardOpen === 'igniter'}
+  {#if urlParam === 'igniter'}
     <Igniter />
-  {:else if cardOpen === 'interface'}
+  {:else if urlParam === 'interface'}
     <Interface />
-  {:else if cardOpen === 'buddytree'}
+  {:else if urlParam === 'buddytree'}
     <Buddytree />
-  {:else if cardOpen === 'contract'}
+  {:else if urlParam === 'contract'}
     <Contract />
   {:else}
     <ol class="grid" out:scale={{ duration: 200 }} in:scale={{ delay: 200 }}>

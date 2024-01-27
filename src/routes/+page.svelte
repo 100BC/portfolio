@@ -5,6 +5,8 @@
   import Experience from './_sections/experience.svelte';
   import Intro from './_sections/intro.svelte';
   import Skills from './_sections/skills.svelte';
+
+  export let data;
 </script>
 
 <Head
@@ -18,6 +20,6 @@
 />
 <Intro />
 <About />
-<Experience />
+<Experience urlParam={data.exp} />
 <Skills />
 <Contact />
