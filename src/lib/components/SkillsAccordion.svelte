@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { slide } from 'svelte/transition';
+  import { scale, slide } from 'svelte/transition';
 
   export let handleOpen: () => void;
   export let skills: string[];
@@ -15,13 +15,9 @@
     disabled={isOpen}
   >
     <h3><slot /></h3>
-    <div class="arrow">
-      {#if isOpen}
-        -
-      {:else}
-        +
-      {/if}
-    </div>
+    {#if !isOpen}
+      <div class="open" transition:scale>+</div>
+    {/if}
   </button>
   {#if isOpen}
     <ul transition:slide>
@@ -62,7 +58,7 @@
     background-color: $purple;
   }
 
-  .arrow {
+  .open {
     position: absolute;
     top: 50%;
     right: 10px;
