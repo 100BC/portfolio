@@ -53,6 +53,11 @@
     :global(li) {
       max-width: 80ch;
       margin-top: 1rem;
+
+      > :global(ul) {
+        padding-left: 15px;
+        list-style: circle;
+      }
     }
   }
 

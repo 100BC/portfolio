@@ -2,6 +2,7 @@
   import ExperienceCard from '$lib/components/ExperienceCard.svelte';
   import { fade, fly, scale } from 'svelte/transition';
   import Buddytree from './experiences/buddytree.svelte';
+  import Internship from './experiences/internship.svelte';
   import Contract from './experiences/contract.svelte';
   import Igniter from './experiences/igniter.svelte';
   import Interface from './experiences/interface.svelte';
@@ -14,6 +15,7 @@
   const interfaceUrl = '?exp=interface#experience';
   const buddytreeUrl = '?exp=buddytree#experience';
   const contractUrl = '?exp=contract#experience';
+  const internUrl = '?exp=intern#experience';
 </script>
 
 <section aria-label="Work Experience" id="experience" class="fullPage">
@@ -48,6 +50,9 @@
         <li class:selected={urlParam === 'contract'}>
           <a href={contractUrl}>Contract</a>
         </li>
+        <li class:selected={urlParam === 'intern'}>
+          <a href={internUrl}>Trust Science</a>
+        </li>
       </ul>
       <div class="headerSelect">
         <label for="select">Filter:</label>
@@ -57,10 +62,11 @@
           on:change={() =>
             goto(urlParam ? `?exp=${urlParam}#experience` : baseUrl)}
         >
-          <option value="igniter"> Igniter Tickets </option>
-          <option value="interface"> Interface Fluidics </option>
+          <option value="igniter">Igniter Tickets</option>
+          <option value="interface">Interface Fluidics</option>
           <option value="buddytree">Buddytree</option>
           <option value="contract">Contract</option>
+          <option value="intern">Trust Science</option>
         </select>
       </div>
     </header>
@@ -74,6 +80,8 @@
     <Buddytree />
   {:else if urlParam === 'contract'}
     <Contract />
+  {:else if urlParam === 'intern'}
+    <Internship />
   {:else}
     <ol class="grid" out:scale={{ duration: 200 }} in:scale={{ delay: 200 }}>
       <li>
@@ -108,6 +116,14 @@
           <svelte:fragment slot="title">Contract Work</svelte:fragment>
           <svelte:fragment slot="role">Web Developer</svelte:fragment>
           <svelte:fragment slot="duration">2020-present</svelte:fragment>
+        </ExperienceCard>
+      </li>
+      <li>
+        <ExperienceCard href={contractUrl}>
+          <svelte:fragment slot="title">Trust Science</svelte:fragment>
+          <svelte:fragment slot="role">Summer Intern</svelte:fragment>
+          <svelte:fragment slot="duration">May 2018 - Aug. 2018</svelte:fragment
+          >
         </ExperienceCard>
       </li>
     </ol>
