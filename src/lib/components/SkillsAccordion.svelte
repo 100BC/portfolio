@@ -70,7 +70,7 @@
   ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 1ch;
+    gap: 0.8ch;
     justify-content: center;
     padding-left: 0;
     text-align: center;
