@@ -11,7 +11,6 @@ export const frameworks = [
   'Node.js',
   'Express.js',
 ];
-
 export const languages = [
   'JavaScript',
   'TypeScript',
@@ -28,7 +27,7 @@ export const services = [
   'Linux',
   'NGINX',
   'Github Actions',
-  'Gitlab CI/CD',
+  'Gitlab CI',
   'Cloudinary',
   'Firebase',
   'Google Cloud Platform',
@@ -38,6 +37,6 @@ export const skills = [
   'Software Optimization',
   'Search Engine Optimization (SEO)',
   'Responsive Web Design',
-  'Progressive Web Apps',
+  'Progressive Web Apps (PWA)',
   'Web Content Accessibility Guidelines (WCAG)',
 ];
