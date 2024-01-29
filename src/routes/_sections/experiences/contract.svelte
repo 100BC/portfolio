@@ -13,7 +13,7 @@
   ];
 </script>
 
-<WorkExperience>
+<WorkExperience isLast={true}>
   <svelte:fragment slot="title">Contract Work</svelte:fragment>
   <svelte:fragment slot="role">
     Creating websites for local businesses

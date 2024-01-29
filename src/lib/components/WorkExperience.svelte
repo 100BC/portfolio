@@ -1,11 +1,14 @@
 <script lang="ts">
   import { fly } from 'svelte/transition';
+
+  export let isLast = false;
 </script>
 
 <div
   class="card"
   in:fly={{ delay: 200, x: -200 }}
   out:fly={{ duration: 100, x: 200 }}
+  class:isLast
 >
   <h3><slot name="title" /></h3>
   <h4><slot name="role" /></h4>
@@ -35,6 +38,10 @@
       margin: 0;
       font-size: 2rem;
     }
+  }
+
+  .isLast {
+    border-top-right-radius: 0 !important;
   }
 
   :global(ul.tasks) {
