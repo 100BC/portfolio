@@ -28,7 +28,7 @@
       >&lt;&lt; Back
     </a>
   {:else}
-    <h2 class:small={!!urlParam} in:scale>Work Experience</h2>
+    <h2 in:scale>Work Experience</h2>
   {/if}
 
   {#if urlParam}
@@ -212,11 +212,6 @@
   }
 
   @media screen and (width <= $phone) {
-    .grid {
-      display: flex;
-      flex-direction: column;
-    }
-
     .small {
       font-size: 3rem;
     }

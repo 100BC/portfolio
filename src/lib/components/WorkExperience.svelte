@@ -41,21 +41,13 @@
     }
   }
 
-  .isLast {
-    border-top-right-radius: 0;
-  }
-
-  .isFirst {
-    border-top-left-radius: 0;
-  }
-
   :global(ul.tasks) {
     :global(li) {
       max-width: 80ch;
       margin-top: 1rem;
 
       > :global(ul) {
-        padding-left: 15px;
+        padding-inline-start: 1.5rem;
         list-style: circle;
       }
     }
@@ -73,6 +65,16 @@
         color: $purple;
         content: ' |';
       }
+    }
+  }
+
+  @media screen and (width > $phone) {
+    .isLast {
+      border-top-right-radius: 0;
+    }
+
+    .isFirst {
+      border-top-left-radius: 0;
     }
   }
 </style>

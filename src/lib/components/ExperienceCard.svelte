@@ -10,7 +10,10 @@
 </a>
 
 <style lang="scss">
+  $h3FontSize: 2.4rem;
+
   a {
+    container-type: inline-size;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -47,7 +50,7 @@
 
   h3 {
     margin: 0;
-    font-size: 2.4rem;
+    font-size: $h3FontSize;
     transition: font-size 0.2s;
   }
 
@@ -57,5 +60,19 @@
     bottom: 5px;
     font-style: italic;
     color: #636363;
+  }
+
+  @container (max-width: 200px) {
+    a:hover > h3 {
+      font-size: $h3FontSize;
+    }
+
+    i {
+      display: none;
+    }
+
+    h3 {
+      margin-bottom: 0;
+    }
   }
 </style>
