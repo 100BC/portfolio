@@ -2,6 +2,7 @@
   import { fly } from 'svelte/transition';
 
   export let isLast = false;
+  export let isFirst = false;
 </script>
 
 <div
@@ -9,9 +10,10 @@
   in:fly={{ delay: 200, x: -200 }}
   out:fly={{ duration: 100, x: 200 }}
   class:isLast
+  class:isFirst
 >
-  <h3><slot name="title" /></h3>
-  <h4><slot name="role" /></h4>
+  <h2><slot name="title" /></h2>
+  <h3><slot name="role" /></h3>
   <time><slot name="duration" /></time>
   <slot name="tasks" />
 
@@ -21,19 +23,18 @@
 
 <style lang="scss">
   .card {
-    max-width: 100ch;
     padding: 2rem;
     margin: auto;
     color: #000;
     background-color: #fff;
     border-radius: $borderRadius;
 
-    > h3 {
+    > h2 {
       margin-top: 0;
       font-size: 2.4rem;
     }
 
-    > h4 {
+    > h3 {
       display: inline-block;
       margin: 0;
       font-size: 2rem;
@@ -41,7 +42,11 @@
   }
 
   .isLast {
-    border-top-right-radius: 0 !important;
+    border-top-right-radius: 0;
+  }
+
+  .isFirst {
+    border-top-left-radius: 0;
   }
 
   :global(ul.tasks) {

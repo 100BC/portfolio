@@ -21,7 +21,7 @@
   ];
 </script>
 
-<WorkExperience>
+<WorkExperience isFirst>
   <svelte:fragment slot="title">Igniter Tickets</svelte:fragment>
   <svelte:fragment slot="role">Software Developer</svelte:fragment>
   <svelte:fragment slot="duration">Feb. 2022 - Nov. 2023</svelte:fragment>

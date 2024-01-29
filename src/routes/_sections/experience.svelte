@@ -1,6 +1,6 @@
 <script lang="ts">
   import ExperienceCard from '$lib/components/ExperienceCard.svelte';
-  import { fade, scale } from 'svelte/transition';
+  import { fade, fly, scale } from 'svelte/transition';
   import Buddytree from './experiences/buddytree.svelte';
   import Contract from './experiences/contract.svelte';
   import Igniter from './experiences/igniter.svelte';
@@ -17,7 +17,17 @@
 </script>
 
 <section aria-label="Work Experience" id="experience" class="fullPage">
-  <h2 class:small={!!urlParam}>Work Experience</h2>
+  {#if urlParam}
+    <a
+      href={baseUrl}
+      class="back"
+      class:small={!!urlParam}
+      in:fly={{ delay: 200, x: -200 }}
+      >&lt;&lt; Back
+    </a>
+  {:else}
+    <h2 class:small={!!urlParam} in:scale>Work Experience</h2>
+  {/if}
 
   {#if urlParam}
     <header
@@ -26,9 +36,6 @@
       out:fade={{ duration: 200 }}
     >
       <ul class="headerNav">
-        <li>
-          <a href={baseUrl}>Card View</a>
-        </li>
         <li class:selected={urlParam === 'igniter'}>
           <a href={igniterUrl}>Igniter Tickets</a>
         </li>
@@ -50,7 +57,6 @@
           on:change={() =>
             goto(urlParam ? `?exp=${urlParam}#experience` : baseUrl)}
         >
-          <option value={null}>Card View</option>
           <option value="igniter"> Igniter Tickets </option>
           <option value="interface"> Interface Fluidics </option>
           <option value="buddytree">Buddytree</option>
@@ -110,7 +116,9 @@
 
 <style lang="scss">
   section {
+    max-width: $laptop;
     padding: 4rem;
+    margin: auto;
   }
 
   h2 {
@@ -130,10 +138,6 @@
   }
 
   header {
-    width: 100ch;
-    max-width: 100%;
-    margin: auto;
-
     > ul {
       display: flex;
       flex-wrap: wrap;
@@ -146,7 +150,7 @@
         flex: 1;
         border-top-left-radius: $borderRadius;
         border-top-right-radius: $borderRadius;
-        transition: background-color 1s;
+        transition: background-color 1.2s;
 
         > a {
           display: flex;
@@ -180,6 +184,17 @@
     display: none;
   }
 
+  .back {
+    display: inline-block;
+    margin: 0.83em auto;
+    font-size: 4rem;
+    font-weight: bold;
+
+    &:hover {
+      color: $green;
+    }
+  }
+
   @media screen and (width <= $phone) {
     .grid {
       display: flex;
@@ -188,8 +203,6 @@
 
     .small {
       font-size: 3rem;
-      text-align: start;
-      transition: font-size 200ms;
     }
 
     .headerNav {
