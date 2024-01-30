@@ -7,12 +7,12 @@ export const igniter = {
   duties: [
     {
       task: `
-      Led a small team to engineer a device-agnostic service, to replace a legacy product, removing reliance on outdated hardware and vendor lock-in
+      Led a small team to engineer a device-agnostic service to replace a legacy product, and remove vendor lock-in and reliance on discontinued hardware
       `,
       subTasks: [
-        `Optimized code to elongate battery life, through efficient state management`,
+        `Optimized code to elongate battery life through efficient state management`,
         `Guaranteed data integrity across multiple devices using the service at the same time`,
-        'Modernized the UI to allow seamless registration of the service, reducing support calls',
+        'Modernized the UI to allow seamless registration of the service, reducing user frustration',
         'Successfully launched the service in beta, earning positive feedback from clients and end-users',
       ],
     },
@@ -22,8 +22,8 @@ export const igniter = {
         'Task was completed within the set deadline, resulting in the successful acquisition of the client and acquiring a significant market share',
       ],
     },
-    'Addressed critical email delivery issues by increasing domain name trust, resulting in a 10% improvement of delivery success rate',
-    'Improved time-to-first-byte by upwards of 300ms on slow loading pages through SQL query optimization',
+    'Addressed critical email delivery issues by increasing domain name trust, improving delivery success rate by 10%',
+    'Reduced time-to-first-byte by upwards of 300ms on slow loading pages through SQL query optimization',
   ],
   tech: [
     'Ruby on Rails',
@@ -55,7 +55,7 @@ export const interfaceFluidics = {
       subTasks: [
         `Implemented modular web components for a unified UI experience`,
         `Improved performance through proper React State management`,
-        `Resulted in increased satisfaction amongst the end-users through extensive UI/UX enhancements`,
+        `Increased the satisfaction amongst the end-users through extensive UI/UX enhancements`,
       ],
     },
   ],
@@ -76,10 +76,9 @@ export const buddytree = {
   time: 'Feb. 2021 - Sept. 2021',
   duties: [
     {
-      task: `Collaborated with a fellow developer to build an Minimum Viable Product (MVP)`,
+      task: `Built a Minimum Viable Product (MVP) in a team of two from the ground up`,
       subTasks: [
-        'Developed a user-friendly website with the major features to showcase the product',
-        `Implemented Microsoft Azure Facial Recognition system for the onboarding process`,
+        `Implemented Microsoft Azure Facial Recognition system for the on-boarding process`,
         `Successfully launched the MVP, attracting new customers, and securing additional funding`,
       ],
     },
