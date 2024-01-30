@@ -88,7 +88,7 @@ export const buddytree = {
 
 export const contract = {
   title: 'Contract Work',
-  role: 'Creating websites for local businesses',
+  role: 'Web Developer',
   time: '2020 - present',
   duties: ['https://www.jyoupsychology.ca', 'https://www.bbrosfinishing.ca'],
   tech: [
