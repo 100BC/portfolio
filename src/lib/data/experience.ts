@@ -8,19 +8,21 @@ export const igniter = {
   duties: [
     {
       task: `
-      Led a small team to engineer a device-agnostic service to replace a legacy product, and remove vendor lock-in and reliance on discontinued hardware
+      Led a small team to engineer a device-agnostic scanner for mobile to replace a legacy product
       `,
       subTasks: [
         `Optimized code to elongate battery life through efficient state management`,
         `Guaranteed data integrity across multiple devices using the service at the same time`,
         'Modernized the UI to allow seamless registration of the service, reducing user frustration',
+        'Coached a Junior Developer on Software Development best practices',
         'Successfully launched the service in beta, earning positive feedback from clients and end-users',
       ],
     },
     {
       task: `Developed a ticket-sharing feature to meet the requirement of a prospective client`,
       subTasks: [
-        'Task was completed within the set deadline, resulting in the successful acquisition of the client and acquiring a significant market share',
+        'Task was completed half a sprint before the set deadline, resulting in the successful acquisition of a major new client',
+        'In the first quarter after the release the feature was used thousands of times across all clients indicating continued growth',
       ],
     },
     'Addressed critical email delivery issues by increasing domain name trust, improving delivery success rate by 10%',
