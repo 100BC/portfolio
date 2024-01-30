@@ -90,7 +90,10 @@ export const contract = {
   title: 'Contract Work',
   role: 'Web Developer',
   time: '2020 - present',
-  duties: ['https://www.jyoupsychology.ca', 'https://www.bbrosfinishing.ca'],
+  duties: [
+    '<a href="https://www.jyoupsychology.ca">https://www.jyoupsychology.ca</a>',
+    '<a href="https://www.bbrosfinishing.ca">https://www.bbrosfinishing.ca</a>',
+  ],
   tech: [
     'React.js',
     'Next.js',

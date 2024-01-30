@@ -8,6 +8,7 @@
   export let isFirst = false;
 </script>
 
+<!-- eslint-disable svelte/no-at-html-tags -->
 <div
   class="card"
   in:fly={{ delay: 200, x: -200 }}
@@ -22,15 +23,15 @@
     {#each experience.duties as duty}
       {#if typeof duty === 'object'}
         <li>
-          {duty.task}
+          {@html duty.task}
           <ul>
             {#each duty.subTasks as subTask}
-              <li>{subTask}</li>
+              <li>{@html subTask}</li>
             {/each}
           </ul>
         </li>
       {:else}
-        <li>{duty}</li>
+        <li>{@html duty}</li>
       {/if}
     {/each}
   </ul>
@@ -64,6 +65,15 @@
   }
 
   .tasks {
+    :global(a) {
+      color: $purple;
+      text-decoration: underline;
+
+      &:hover {
+        color: $darkGreen;
+      }
+    }
+
     li {
       max-width: 80ch;
       margin-top: 1rem;
