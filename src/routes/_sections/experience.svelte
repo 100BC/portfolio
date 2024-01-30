@@ -23,14 +23,16 @@
 <section aria-label="Work Experience" id="experience" class="fullPage">
   <h2 class:small={!!urlParam}>
     {#if urlParam}
-      <a href={baseUrl} class="back" in:fly={{ x: 200 }}> Work Experience </a>
+      <a href={baseUrl} class="back" in:fly={{ x: 250, duration: 500 }}>
+        Work Experience
+      </a>
     {:else}
-      <div in:fly={{ x: -200 }}>Work Experience</div>
+      <div in:fly={{ x: -250, duration: 500 }}>Work Experience</div>
     {/if}
   </h2>
 
   {#if urlParam}
-    <header aria-label="Work Experience" in:fly={{ delay: 200, x: -200 }}>
+    <header aria-label="Work Experience">
       <nav>
         <ul class="headerNav">
           <li class:selected={urlParam === 'igniter'}>
@@ -64,7 +66,7 @@
   {:else if urlParam === 'trustScience'}
     <WorkExperience experience={trustScience} isLast />
   {:else}
-    <ol class="grid" out:scale={{ duration: 200 }} in:scale={{ delay: 200 }}>
+    <ol class="grid" in:scale={{ delay: 200 }}>
       <li>
         <ExperienceCard href={igniterUrl} experience={igniter} />
       </li>
@@ -120,7 +122,6 @@
         flex: 1;
         border-top-left-radius: $borderRadius;
         border-top-right-radius: $borderRadius;
-        transition: background-color 1.2s;
 
         > a {
           display: flex;

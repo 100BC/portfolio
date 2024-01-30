@@ -1,6 +1,5 @@
 <script lang="ts">
   import type { WorkExperience } from '$lib/types';
-  import { fly } from 'svelte/transition';
 
   export let experience: WorkExperience;
 
@@ -9,13 +8,7 @@
 </script>
 
 <!-- eslint-disable svelte/no-at-html-tags -->
-<div
-  class="card"
-  in:fly={{ delay: 200, x: -200 }}
-  out:fly={{ duration: 100, x: 200 }}
-  class:isLast
-  class:isFirst
->
+<div class="card" class:isLast class:isFirst>
   <h3>{experience.title}</h3>
   <h4>{experience.role}</h4>
   <time>{experience.time}</time>
