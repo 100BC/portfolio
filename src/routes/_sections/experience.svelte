@@ -31,23 +31,25 @@
 
   {#if urlParam}
     <header aria-label="Work Experience" in:fly={{ delay: 200, x: -200 }}>
-      <ul class="headerNav">
-        <li class:selected={urlParam === 'igniter'}>
-          <a href={igniterUrl}>Igniter Tickets</a>
-        </li>
-        <li class:selected={urlParam === 'interface'}>
-          <a href={interfaceUrl}>Interface Fluidics</a>
-        </li>
-        <li class:selected={urlParam === 'buddytree'}>
-          <a href={buddytreeUrl}>Buddytree</a>
-        </li>
-        <li class:selected={urlParam === 'contract'}>
-          <a href={contractUrl}>Contract</a>
-        </li>
-        <li class:selected={urlParam === 'trustScience'}>
-          <a href={trustScienceUrl}>Trust Science</a>
-        </li>
-      </ul>
+      <nav>
+        <ul class="headerNav">
+          <li class:selected={urlParam === 'igniter'}>
+            <a href={igniterUrl}>Igniter Tickets</a>
+          </li>
+          <li class:selected={urlParam === 'interface'}>
+            <a href={interfaceUrl}>Interface Fluidics</a>
+          </li>
+          <li class:selected={urlParam === 'buddytree'}>
+            <a href={buddytreeUrl}>Buddytree</a>
+          </li>
+          <li class:selected={urlParam === 'contract'}>
+            <a href={contractUrl}>Contract</a>
+          </li>
+          <li class:selected={urlParam === 'trustScience'}>
+            <a href={trustScienceUrl}>Trust Science</a>
+          </li>
+        </ul>
+      </nav>
     </header>
   {/if}
 
@@ -106,7 +108,7 @@
   }
 
   header {
-    > ul {
+    > nav > ul {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
