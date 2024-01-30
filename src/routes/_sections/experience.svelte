@@ -1,7 +1,6 @@
 <script lang="ts">
   import ExperienceCard from '$lib/components/ExperienceCard.svelte';
-  import { fade, fly, scale } from 'svelte/transition';
-  import { goto } from '$app/navigation';
+  import { fly, scale } from 'svelte/transition';
   import WorkExperience from '$lib/components/WorkExperience.svelte';
   import {
     buddytree,
@@ -18,28 +17,20 @@
   const interfaceUrl = '?exp=interface#experience';
   const buddytreeUrl = '?exp=buddytree#experience';
   const contractUrl = '?exp=contract#experience';
-  const internUrl = '?exp=intern#experience';
+  const trustScienceUrl = '?exp=trustScience#experience';
 </script>
 
 <section aria-label="Work Experience" id="experience" class="fullPage">
-  {#if urlParam}
-    <a
-      href={baseUrl}
-      class="back"
-      class:small={!!urlParam}
-      in:fly={{ delay: 200, x: -200 }}
-      >&lt;&lt; Back
-    </a>
-  {:else}
-    <h2 in:scale>Work Experience</h2>
-  {/if}
+  <h2 class:small={!!urlParam}>
+    {#if urlParam}
+      <a href={baseUrl} class="back" in:fly={{ x: 200 }}> Work Experience </a>
+    {:else}
+      <div in:fly={{ x: -200 }}>Work Experience</div>
+    {/if}
+  </h2>
 
   {#if urlParam}
-    <header
-      aria-label="Work Experience"
-      in:fade={{ delay: 200 }}
-      out:fade={{ duration: 200 }}
-    >
+    <header aria-label="Work Experience" in:fly={{ delay: 200, x: -200 }}>
       <ul class="headerNav">
         <li class:selected={urlParam === 'igniter'}>
           <a href={igniterUrl}>Igniter Tickets</a>
@@ -53,25 +44,10 @@
         <li class:selected={urlParam === 'contract'}>
           <a href={contractUrl}>Contract</a>
         </li>
-        <li class:selected={urlParam === 'intern'}>
-          <a href={internUrl}>Trust Science</a>
+        <li class:selected={urlParam === 'trustScience'}>
+          <a href={trustScienceUrl}>Trust Science</a>
         </li>
       </ul>
-      <div class="headerSelect">
-        <label for="select">Filter:</label>
-        <select
-          bind:value={urlParam}
-          id="select"
-          on:change={() =>
-            goto(urlParam ? `?exp=${urlParam}#experience` : baseUrl)}
-        >
-          <option value="igniter">Igniter Tickets</option>
-          <option value="interface">Interface Fluidics</option>
-          <option value="buddytree">Buddytree</option>
-          <option value="contract">Contract</option>
-          <option value="intern">Trust Science</option>
-        </select>
-      </div>
     </header>
   {/if}
 
@@ -83,51 +59,24 @@
     <WorkExperience experience={buddytree} />
   {:else if urlParam === 'contract'}
     <WorkExperience experience={contract} />
-  {:else if urlParam === 'intern'}
+  {:else if urlParam === 'trustScience'}
     <WorkExperience experience={trustScience} isLast />
   {:else}
     <ol class="grid" out:scale={{ duration: 200 }} in:scale={{ delay: 200 }}>
       <li>
-        <ExperienceCard href={igniterUrl}>
-          <svelte:fragment slot="title">Igniter Tickets</svelte:fragment>
-          <svelte:fragment slot="role">Software Developer</svelte:fragment>
-          <svelte:fragment slot="duration">
-            Feb. 2022 - Nov. 2023
-          </svelte:fragment>
-        </ExperienceCard>
+        <ExperienceCard href={igniterUrl} experience={igniter} />
       </li>
       <li>
-        <ExperienceCard href={interfaceUrl}>
-          <svelte:fragment slot="title">Interface Fluidics</svelte:fragment>
-          <svelte:fragment slot="role">React Developer</svelte:fragment>
-          <svelte:fragment slot="duration">
-            Oct. 2021 - Jan. 2022
-          </svelte:fragment>
-        </ExperienceCard>
+        <ExperienceCard href={interfaceUrl} experience={interfaceFluidics} />
       </li>
       <li>
-        <ExperienceCard href={buddytreeUrl}>
-          <svelte:fragment slot="title">Buddytree</svelte:fragment>
-          <svelte:fragment slot="role">Software Developer</svelte:fragment>
-          <svelte:fragment slot="duration">
-            Feb. 2021 - Sept 2022
-          </svelte:fragment>
-        </ExperienceCard>
+        <ExperienceCard href={buddytreeUrl} experience={buddytree} />
       </li>
       <li>
-        <ExperienceCard href={contractUrl}>
-          <svelte:fragment slot="title">Contract Work</svelte:fragment>
-          <svelte:fragment slot="role">Web Developer</svelte:fragment>
-          <svelte:fragment slot="duration">2020-present</svelte:fragment>
-        </ExperienceCard>
+        <ExperienceCard href={contractUrl} experience={contract} />
       </li>
       <li>
-        <ExperienceCard href={contractUrl}>
-          <svelte:fragment slot="title">Trust Science</svelte:fragment>
-          <svelte:fragment slot="role">Summer Intern</svelte:fragment>
-          <svelte:fragment slot="duration">May 2018 - Aug. 2018</svelte:fragment
-          >
-        </ExperienceCard>
+        <ExperienceCard href={trustScienceUrl} experience={trustScience} />
       </li>
     </ol>
   {/if}
@@ -199,18 +148,16 @@
     }
   }
 
-  .headerSelect {
-    display: none;
-  }
-
   .back {
-    display: inline-block;
-    margin: 0.83em auto;
-    font-size: 4rem;
-    font-weight: bold;
+    display: block;
+    text-align: start;
 
     &:hover {
       color: $green;
+    }
+
+    &::before {
+      content: '<< ';
     }
   }
 
@@ -221,23 +168,6 @@
 
     .headerNav {
       display: none;
-    }
-
-    .headerSelect {
-      display: block;
-      font-size: 1.8rem;
-
-      > select {
-        width: 100%;
-        margin: 0 0 2rem;
-        font-size: 2rem;
-        font-weight: bold;
-        color: $white;
-        text-align: center;
-        background-color: $purple;
-        border: 0;
-        border-radius: $borderRadius;
-      }
     }
   }
 </style>

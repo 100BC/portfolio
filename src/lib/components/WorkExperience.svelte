@@ -15,8 +15,8 @@
   class:isLast
   class:isFirst
 >
-  <h2>{experience.title}</h2>
-  <h3>{experience.role}</h3>
+  <h3>{experience.title}</h3>
+  <h4>{experience.role}</h4>
   <time>{experience.time}</time>
   <ul class="tasks">
     {#each experience.duties as duty}
@@ -35,7 +35,7 @@
     {/each}
   </ul>
 
-  <h3>Tech Stack</h3>
+  <h4>Tech Stack</h4>
   <ul class="techStack">
     {#each experience.tech as tech}
       <li>{tech}</li>
@@ -51,12 +51,12 @@
     background-color: #fff;
     border-radius: $borderRadius;
 
-    > h2 {
+    > h3 {
       margin-top: 0;
       font-size: 2.4rem;
     }
 
-    > h3 {
+    > h4 {
       display: inline-block;
       margin: 0;
       font-size: 2rem;

@@ -1,11 +1,14 @@
 <script lang="ts">
+  import type { WorkExperience } from '$lib/types';
+
   export let href: string;
+  export let experience: WorkExperience;
 </script>
 
 <a {href}>
-  <h3><slot name="title" /></h3>
-  <i><slot name="role" /></i>
-  <time><slot name="duration" /></time>
+  <h3>{experience.title}</h3>
+  <i>{experience.role}</i>
+  <time>{experience.time}</time>
   <span class="readMore">Read more</span>
 </a>
 
