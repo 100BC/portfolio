@@ -7,19 +7,23 @@ export const igniter = {
   duties: [
     {
       task: `
-      Led a small team to replace a legacy product resulting in a significant
-      reduction of the company's operational costs by eliminating vendor lock-in
-      and the improvement of UI/UX
+      Led a small team to engineer a device-agnostic service, to replace a legacy product, removing reliance on outdated hardware and vendor lock-in
       `,
       subTasks: [
-        'Conducted a successful field test of the beta product, receiving positive feedback from the client',
-        'Coached a Junior Developer on software development best practices',
+        `Optimized code to elongate battery life, through efficient state management`,
+        `Guaranteed data integrity across multiple devices using the service at the same time`,
+        'Modernized the UI to allow seamless registration of the service, reducing support calls',
+        'Successfully launched the service in beta, earning positive feedback from clients and end-users',
       ],
     },
-    `Completed the creation of a new client requested feature meeting the set deadline, leading to a new client acquisition in a key market`,
-    `Enhanced the email delivery system, significantly improving the delivery rate`,
-    `Resolved N+1 performance issues through extensive SQL query optimizations, reducing time to first byte on key pages by upwards of 300ms`,
-    `Created tailored website themes to match the unique brand aesthetics for new clients`,
+    {
+      task: `Developed a ticket-sharing feature to meet the requirement of a prospective client`,
+      subTasks: [
+        'Task was completed within the set deadline, resulting in the successful acquisition of the client and acquiring a significant market share',
+      ],
+    },
+    'Addressed critical email delivery issues by increasing domain name trust, resulting in a 10% improvement of delivery success rate',
+    'Improved time-to-first-byte by upwards of 300ms on slow loading pages through SQL query optimization',
   ],
   tech: [
     'Ruby on Rails',
@@ -47,15 +51,13 @@ export const interfaceFluidics = {
   time: 'Oct. 2021 - Jan. 2022',
   duties: [
     {
-      task: `Collaborated with the tech lead to refactor the internal React portal`,
+      task: `Collaborated with the tech lead to refactor the internal portal, eliminating legacy code and tech debt`,
       subTasks: [
-        `Improved performance by eliminating unnecessary re-rendering on state changes`,
-        `Enhanced code readability by consolidating duplicate code into modular web components`,
-        `Overhauled Material UI code to align accurately with documentation standards`,
-        `Improved the user experience by combining numerous routes into one`,
+        `Implemented modular web components for a unified UI experience`,
+        `Improved performance through proper React State management`,
+        `Resulted in increased satisfaction amongst the end-users through extensive UI/UX enhancements`,
       ],
     },
-    `Spearheaded the creation of a sophisticated internal portal tailored for scientific research of the company's chemists and engineers`,
   ],
   tech: [
     'React.js',
@@ -74,12 +76,12 @@ export const buddytree = {
   time: 'Feb. 2021 - Sept. 2021',
   duties: [
     {
-      task: `
-      Assisted and then led the creation and design of a social media
-      website for a startup, resulting in the successful launch of the
-      Minimum Viable Product (MVP)
-      `,
-      subTasks: [`Coached a university intern on React best practices`],
+      task: `Collaborated with a fellow developer to build an Minimum Viable Product (MVP)`,
+      subTasks: [
+        'Developed a user-friendly website with the major features to showcase the product',
+        `Implemented Microsoft Azure Facial Recognition system for the onboarding process`,
+        `Successfully launched the MVP, attracting new customers, and securing additional funding`,
+      ],
     },
     `Collaborated closely with the CEO to create new features based on Figma designs`,
   ],
@@ -91,8 +93,13 @@ export const contract = {
   role: 'Web Developer',
   time: '2020 - present',
   duties: [
-    '<a href="https://www.jyoupsychology.ca">https://www.jyoupsychology.ca</a>',
-    '<a href="https://www.bbrosfinishing.ca">https://www.bbrosfinishing.ca</a>',
+    {
+      task: 'Developing websites for local businesses',
+      subTasks: [
+        '<a href="https://www.jyoupsychology.ca">https://www.jyoupsychology.ca</a>',
+        '<a href="https://www.bbrosfinishing.ca">https://www.bbrosfinishing.ca</a>',
+      ],
+    },
   ],
   tech: [
     'React.js',

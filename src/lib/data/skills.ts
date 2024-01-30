@@ -9,6 +9,7 @@ export const frameworks = [
   'RSpec',
   'CouchDB',
   'Node.js',
+  'MySQL',
   'Express.js',
 ];
 export const languages = [
@@ -28,6 +29,7 @@ export const services = [
   'NGINX',
   'Github Actions',
   'Gitlab CI',
+  'Docker',
   'Cloudinary',
   'Firebase',
   'Google Cloud Platform',
@@ -39,4 +41,5 @@ export const skills = [
   'Responsive Web Design',
   'Progressive Web Apps (PWA)',
   'Web Content Accessibility Guidelines (WCAG)',
+  'Email Delivery Systems',
 ];
