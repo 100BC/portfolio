@@ -1,12 +1,15 @@
 <script lang="ts">
   import ExperienceCard from '$lib/components/ExperienceCard.svelte';
   import { fade, fly, scale } from 'svelte/transition';
-  import Buddytree from './experiences/buddytree.svelte';
-  import Internship from './experiences/internship.svelte';
-  import Contract from './experiences/contract.svelte';
-  import Igniter from './experiences/igniter.svelte';
-  import Interface from './experiences/interface.svelte';
   import { goto } from '$app/navigation';
+  import WorkExperience from '$lib/components/WorkExperience.svelte';
+  import {
+    buddytree,
+    contract,
+    igniter,
+    interfaceFluidics,
+    trustScience,
+  } from '$lib/data/experience';
 
   export let urlParam: string | null;
 
@@ -73,15 +76,15 @@
   {/if}
 
   {#if urlParam === 'igniter'}
-    <Igniter />
+    <WorkExperience experience={igniter} isFirst />
   {:else if urlParam === 'interface'}
-    <Interface />
+    <WorkExperience experience={interfaceFluidics} />
   {:else if urlParam === 'buddytree'}
-    <Buddytree />
+    <WorkExperience experience={buddytree} />
   {:else if urlParam === 'contract'}
-    <Contract />
+    <WorkExperience experience={contract} />
   {:else if urlParam === 'intern'}
-    <Internship />
+    <WorkExperience experience={trustScience} isLast />
   {:else}
     <ol class="grid" out:scale={{ duration: 200 }} in:scale={{ delay: 200 }}>
       <li>

@@ -1,5 +1,8 @@
 <script lang="ts">
+  import type { WorkExperience } from '$lib/types';
   import { fly } from 'svelte/transition';
+
+  export let experience: WorkExperience;
 
   export let isLast = false;
   export let isFirst = false;
@@ -12,13 +15,32 @@
   class:isLast
   class:isFirst
 >
-  <h2><slot name="title" /></h2>
-  <h3><slot name="role" /></h3>
-  <time><slot name="duration" /></time>
-  <slot name="tasks" />
+  <h2>{experience.title}</h2>
+  <h3>{experience.role}</h3>
+  <time>{experience.time}</time>
+  <ul class="tasks">
+    {#each experience.duties as duty}
+      {#if typeof duty === 'object'}
+        <li>
+          {duty.task}
+          <ul>
+            {#each duty.subTasks as subTask}
+              <li>{subTask}</li>
+            {/each}
+          </ul>
+        </li>
+      {:else}
+        <li>{duty}</li>
+      {/if}
+    {/each}
+  </ul>
 
-  <h4>Tech Stack</h4>
-  <slot name="techStack" class="techStack" />
+  <h3>Tech Stack</h3>
+  <ul class="techStack">
+    {#each experience.tech as tech}
+      <li>{tech}</li>
+    {/each}
+  </ul>
 </div>
 
 <style lang="scss">
@@ -41,19 +63,19 @@
     }
   }
 
-  :global(ul.tasks) {
-    :global(li) {
+  .tasks {
+    li {
       max-width: 80ch;
       margin-top: 1rem;
 
-      > :global(ul) {
+      > ul {
         padding-inline-start: 1.5rem;
         list-style: circle;
       }
     }
   }
 
-  :global(ul.techStack) {
+  .techStack {
     display: flex;
     flex-wrap: wrap;
     gap: 0.8ch;

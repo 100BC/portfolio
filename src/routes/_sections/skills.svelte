@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { frameworks, languages, services, skills } from './skills';
+  import { frameworks, languages, services, skills } from '$lib/data/skills';
   import SkillsAccordion from '$lib/components/SkillsAccordion.svelte';
 
   let openSec: number | null = 0;
