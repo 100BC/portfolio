@@ -9,9 +9,11 @@
 
 <!-- eslint-disable svelte/no-at-html-tags -->
 <div class="card" class:isLast class:isFirst>
-  <h3>{experience.title}</h3>
-  <h4>{experience.role}</h4>
-  <time>{experience.time}</time>
+  <h3>{experience.title} - {experience.role}</h3>
+  <div class="info">
+    <time>{experience.time}</time>
+    <address>{experience.location}</address>
+  </div>
   <ul class="tasks">
     {#each experience.duties as duty}
       {#if typeof duty === 'object'}
@@ -46,7 +48,7 @@
     border-radius: $borderRadius;
 
     > h3 {
-      margin-top: 0;
+      margin: 0 0 0.5em;
       font-size: 2.4rem;
     }
 
@@ -55,6 +57,11 @@
       margin: 0;
       font-size: 2rem;
     }
+  }
+
+  .info {
+    display: flex;
+    justify-content: space-between;
   }
 
   .tasks {
@@ -68,7 +75,6 @@
     }
 
     li {
-      max-width: 80ch;
       margin-top: 1rem;
 
       > ul {

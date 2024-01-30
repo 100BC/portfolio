@@ -4,6 +4,7 @@ export const igniter = {
   title: 'Igniter Tickets',
   role: 'Software Developer',
   time: 'Feb. 2022 - Nov. 2023',
+  location: 'Remote',
   duties: [
     {
       task: `
@@ -48,6 +49,7 @@ export const igniter = {
 export const interfaceFluidics = {
   title: 'Interface Fluidics',
   role: 'React Developer',
+  location: 'Edmonton AB (Hybrid)',
   time: 'Oct. 2021 - Jan. 2022',
   duties: [
     {
@@ -73,6 +75,7 @@ export const interfaceFluidics = {
 export const buddytree = {
   title: 'Buddytree',
   role: 'Web Developer',
+  location: 'Remote',
   time: 'Feb. 2021 - Sept. 2021',
   duties: [
     {
@@ -91,6 +94,7 @@ export const contract = {
   title: 'Contract Work',
   role: 'Web Developer',
   time: '2020 - present',
+  location: 'Remote',
   duties: [
     {
       task: 'Developing websites for local businesses',
@@ -116,8 +120,9 @@ export const trustScience = {
   title: 'Trust Science',
   role: 'Summer Intern',
   time: 'May 2018 - Aug. 2018',
+  location: 'Edmonton AB',
   duties: [
-    `Assisted in refactoring the mobile application to approximately 60% of its original size'`,
+    `Assisted in refactoring the mobile application to approximately 60% of its original size`,
     `Improved the sign up process through UI/UX improvements`,
     `Created a text message sign up verification process via AWS Lambda`,
   ],
