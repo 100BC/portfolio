@@ -21,7 +21,7 @@ export const igniter = {
     {
       task: `Developed a ticket-sharing feature to meet the requirement of a prospective client`,
       subTasks: [
-        'Task was completed half a sprint before the set deadline, resulting in the successful acquisition of a major new client',
+        'Completed the task half a sprint before the set deadline, resulting in the successful acquisition of a major new client',
         'In the first quarter after the release the feature was used thousands of times across all clients indicating continued growth',
       ],
     },
