@@ -89,7 +89,7 @@ export const buddytree = {
     },
     `Collaborated closely with the CEO to create new features based on Figma designs`,
   ],
-  tech: ['React.js', 'Next.js', 'TypeScript', 'JSX', 'SCSS'],
+  tech: ['React.js', 'Next.js', 'Redux', 'TypeScript', 'JSX', 'SCSS'],
 } satisfies WorkExperience;
 
 export const contract = {

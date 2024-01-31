@@ -37,9 +37,11 @@ export const services = [
 export const skills = [
   'UI/UX',
   'Software Optimization',
+  'Image Optimizations',
   'Search Engine Optimization (SEO)',
   'Responsive Web Design',
   'Progressive Web Apps (PWA)',
   'Web Content Accessibility Guidelines (WCAG)',
   'Email Delivery Systems',
+  'Unit Testing',
 ];
