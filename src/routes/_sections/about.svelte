@@ -103,7 +103,7 @@
         </p>
         <p>
           While Front End Development is my forte, I am no stranger to Back End
-          development. I have experience in developing in Model View Controller
+          development. I have experience developing in Model View Controller
           (MVC) environments, creating API routes, and optimizing SQL queries.
         </p>
         <p>I am currently based in Toronto, ON.</p>
