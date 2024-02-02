@@ -23,11 +23,17 @@
 <section aria-label="Work Experience" id="experience" class="fullPage">
   <h2 class:small={!!urlParam}>
     {#if urlParam}
-      <a href={baseUrl} class="back" in:fly={{ x: 250, duration: 500 }}>
+      <a
+        href={baseUrl}
+        class="back"
+        in:fly={{ x: 100, duration: 500, opacity: 100 }}
+      >
         Work Experience
       </a>
     {:else}
-      <div in:fly={{ x: -250, duration: 500 }}>Work Experience</div>
+      <div in:fly={{ x: -100, duration: 500, opacity: 100 }}>
+        Work Experience
+      </div>
     {/if}
   </h2>
 
