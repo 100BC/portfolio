@@ -9,6 +9,7 @@
     interfaceFluidics,
     trustScience,
   } from '$lib/data/experience';
+  import { goto } from '$app/navigation';
 
   export let urlParam: string | null;
   const validUrls = [
@@ -18,7 +19,7 @@
     'contract',
     'trustScience',
   ];
-  $: validUrl = validUrls.includes(urlParam || '');
+  $: isValidUrl = validUrls.includes(urlParam || '');
 
   const baseUrl = '.#experience';
   const igniterUrl = '?exp=igniter#experience';
@@ -26,6 +27,50 @@
   const buddytreeUrl = '?exp=buddytree#experience';
   const contractUrl = '?exp=contract#experience';
   const trustScienceUrl = '?exp=trustScience#experience';
+
+  function handleNext() {
+    switch (urlParam) {
+      case 'igniter':
+        goto(interfaceUrl);
+        break;
+      case 'interface':
+        goto(buddytreeUrl);
+        break;
+      case 'buddytree':
+        goto(contractUrl);
+        break;
+      case 'contract':
+        goto(trustScienceUrl);
+        break;
+      case 'trustScience':
+        goto(igniterUrl);
+        break;
+      default:
+        break;
+    }
+  }
+
+  function handlePrev() {
+    switch (urlParam) {
+      case 'igniter':
+        goto(trustScienceUrl);
+        break;
+      case 'interface':
+        goto(igniterUrl);
+        break;
+      case 'buddytree':
+        goto(interfaceUrl);
+        break;
+      case 'contract':
+        goto(buddytreeUrl);
+        break;
+      case 'trustScience':
+        goto(buddytreeUrl);
+        break;
+      default:
+        break;
+    }
+  }
 </script>
 
 <section aria-label="Work Experience" id="experience" class="fullPage">
@@ -45,10 +90,10 @@
     {/if}
   </h2>
 
-  {#if validUrl}
+  {#if isValidUrl}
     <header aria-label="Work Experience">
-      <nav>
-        <ul class="headerNav">
+      <nav class="desktopNav">
+        <ul>
           <li class:selected={urlParam === 'igniter'}>
             <a href={igniterUrl}>Igniter Tickets</a>
           </li>
@@ -65,6 +110,10 @@
             <a href={trustScienceUrl}>Trust Science</a>
           </li>
         </ul>
+      </nav>
+      <nav class="mobileNav">
+        <button type="button" on:click={() => handlePrev()}>Previous</button>
+        <button type="button" on:click={() => handleNext()}>Next</button>
       </nav>
     </header>
     {#if urlParam === 'igniter'}
@@ -122,8 +171,24 @@
     list-style: none;
   }
 
+  .mobileNav {
+    display: none;
+    justify-content: space-between;
+
+    > button {
+      font-size: 2rem;
+      font-weight: bold;
+      color: $purple;
+      background: 0;
+
+      &:hover {
+        color: $green;
+      }
+    }
+  }
+
   header {
-    > nav > ul {
+    > .desktopNav > ul {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
@@ -167,6 +232,7 @@
   .back {
     display: block;
     text-align: start;
+    text-decoration: underline;
 
     &:hover {
       color: $green;
@@ -182,8 +248,12 @@
       font-size: 3rem;
     }
 
-    .headerNav {
+    .desktopNav {
       display: none;
+    }
+
+    .mobileNav {
+      display: flex;
     }
   }
 </style>
