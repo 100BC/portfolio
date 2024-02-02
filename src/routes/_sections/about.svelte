@@ -103,9 +103,8 @@
         </p>
         <p>
           While Front End Development is my forte, I am no stranger to Back End
-          development, wherein I developed in Model View Controller (MVC)
-          environments, created REST and GraphQL API routes, optimized SQL
-          queries and much more.
+          development. I have experience in developing in Model View Controller
+          (MVC) environments, creating API routes, and optimizing SQL queries.
         </p>
         <p>I am currently based in Toronto, ON.</p>
       </div>
