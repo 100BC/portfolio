@@ -102,9 +102,10 @@
           optimizing software to reduce time-to-first byte.
         </p>
         <p>
-          While Front End Development is my forte, I am no stranger to back end
-          development, having created API routes, developed GraphQL servers,
-          optimized SQL queries and much more.
+          While Front End Development is my forte, I am no stranger to Back End
+          development, wherein I developed in Model View Controller (MVC)
+          environments, created REST and GraphQL API routes, optimized SQL
+          queries and much more.
         </p>
         <p>I am currently based in Toronto, ON.</p>
       </div>
