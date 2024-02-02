@@ -11,6 +11,14 @@
   } from '$lib/data/experience';
 
   export let urlParam: string | null;
+  const validUrls = [
+    'igniter',
+    'interface',
+    'buddytree',
+    'contract',
+    'trustScience',
+  ];
+  $: validUrl = validUrls.includes(urlParam || '');
 
   const baseUrl = '.#experience';
   const igniterUrl = '?exp=igniter#experience';
@@ -37,7 +45,7 @@
     {/if}
   </h2>
 
-  {#if urlParam}
+  {#if validUrl}
     <header aria-label="Work Experience">
       <nav>
         <ul class="headerNav">
@@ -59,18 +67,17 @@
         </ul>
       </nav>
     </header>
-  {/if}
-
-  {#if urlParam === 'igniter'}
-    <WorkExperience experience={igniter} isFirst />
-  {:else if urlParam === 'interface'}
-    <WorkExperience experience={interfaceFluidics} />
-  {:else if urlParam === 'buddytree'}
-    <WorkExperience experience={buddytree} />
-  {:else if urlParam === 'contract'}
-    <WorkExperience experience={contract} />
-  {:else if urlParam === 'trustScience'}
-    <WorkExperience experience={trustScience} isLast />
+    {#if urlParam === 'igniter'}
+      <WorkExperience experience={igniter} isFirst />
+    {:else if urlParam === 'interface'}
+      <WorkExperience experience={interfaceFluidics} />
+    {:else if urlParam === 'buddytree'}
+      <WorkExperience experience={buddytree} />
+    {:else if urlParam === 'contract'}
+      <WorkExperience experience={contract} />
+    {:else if urlParam === 'trustScience'}
+      <WorkExperience experience={trustScience} isLast />
+    {/if}
   {:else}
     <ol class="grid" in:scale={{ delay: 200 }}>
       <li>
