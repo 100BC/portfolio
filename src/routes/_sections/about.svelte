@@ -60,7 +60,6 @@
       <div class="prefix">I am a</div>
       <h2 aria-label="Software Developer">
         <span use:typing>{titleText}</span><span use:blinking>|</span>
-        <noscript>Software Developer</noscript>
       </h2>
     </div>
   </div>
