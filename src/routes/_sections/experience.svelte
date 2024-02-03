@@ -74,23 +74,10 @@
 </script>
 
 <section aria-label="Work Experience" id="experience" class="fullPage">
-  <h2 class:small={!!urlParam}>
-    {#if urlParam}
-      <a
-        href={baseUrl}
-        class="back"
-        in:fly={{ x: 100, duration: 500, opacity: 100 }}
-      >
-        Work Experience
-      </a>
-    {:else}
-      <div in:fly={{ x: -100, duration: 500, opacity: 100 }}>
-        Work Experience
-      </div>
-    {/if}
-  </h2>
-
   {#if isValidUrl}
+    <h2 class="small" in:fly={{ x: 100, duration: 500, opacity: 100 }}>
+      <a href={baseUrl} class="back"> Work Experience </a>
+    </h2>
     <header aria-label="Work Experience">
       <nav class="desktopNav">
         <ul>
@@ -128,6 +115,7 @@
       <WorkExperience experience={trustScience} isLast />
     {/if}
   {:else}
+    <h2 in:fly={{ x: -100, duration: 500, opacity: 100 }}>Work Experience</h2>
     <ol class="grid" in:scale={{ delay: 200 }}>
       <li>
         <ExperienceCard href={igniterUrl} experience={igniter} />
