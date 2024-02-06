@@ -2,12 +2,12 @@
   import { PUBLIC_WEB3FORM_KEY } from '$env/static/public';
   import Spinner from '$lib/components/Spinner.svelte';
 
-  let submitting = 0;
+  let submitting: 'form' | 'submitting' | 'submitted' = 'form';
   let error: unknown;
   let form: HTMLFormElement;
 
   async function handleSubmit() {
-    submitting = 1;
+    submitting = 'submitting';
     error = null;
     const formData = new FormData(form);
     const obj = Object.fromEntries(formData);
@@ -24,14 +24,14 @@
       });
       const data = await res.json();
       if (res.ok) {
-        submitting = 2;
+        submitting = 'submitted';
       } else {
-        submitting = 0;
+        submitting = 'form';
         error = data.message;
       }
     } catch (err) {
       error = err;
-      submitting = 0;
+      submitting = 'form';
     }
   }
 </script>
@@ -39,11 +39,11 @@
 <section aria-label="contact" class="fullPage" id="contact">
   <h2>Contact</h2>
 
-  {#if submitting === 1}
+  {#if submitting === 'submitting'}
     <div class="spinner">
       <Spinner />
     </div>
-  {:else if submitting === 2}
+  {:else if submitting === 'submitted'}
     <b class="submitted">
       Message Sent
       <br />
