@@ -93,17 +93,17 @@
     {:else}
       <div class="tabContent">
         <p>
-          I am a Software Developer and Web Developer. I am primarily focused on
+          I am a Software Developer and Web Developer. I have deep knowledge in
           Front End Development, due to my background in Human Computer
-          interaction. This encompasses advanced knowledge in UI/UX, Semantic
+          Interaction. This encompasses advanced knowledge in UI/UX, Semantic
           HTML, and Web Accessibility Guidelines. I am also skilled in creating
           mobile friendly websites through Responsive Web Design, SEO, and
           optimizing software to reduce time-to-first byte.
         </p>
         <p>
-          While Front End Development is my forte, I am no stranger to Back End
-          development. I have experience developing in Model View Controller
-          (MVC) environments, creating API routes, and optimizing SQL queries.
+          However, I am no stranger to Back End development, as I have
+          experience developing in Model View Controller (MVC) environments,
+          creating API routes, and optimizing SQL queries.
         </p>
         <p>I am currently based in Toronto, ON.</p>
       </div>
