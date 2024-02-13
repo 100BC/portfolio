@@ -12,7 +12,7 @@ export const frameworks = [
   'MySQL',
   'Express.js',
 ];
-export const languages = [
+export const programmingLanguages = [
   'JavaScript',
   'TypeScript',
   'Ruby',
@@ -45,3 +45,4 @@ export const skills = [
   'Email Delivery Systems',
   'Unit Testing',
 ];
+export const languages = ['English', 'Arabic', 'Russian'];

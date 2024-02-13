@@ -1,8 +1,14 @@
 <script lang="ts">
-  import { frameworks, languages, services, skills } from '$lib/data/skills';
+  import {
+    frameworks,
+    languages,
+    programmingLanguages,
+    services,
+    skills,
+  } from '$lib/data/skills';
   import SkillsAccordion from '$lib/components/SkillsAccordion.svelte';
 
-  let openSec: number | null = 0;
+  let openSec = 0;
 
   function handleOpen(sec: number) {
     openSec = sec;
@@ -22,9 +28,9 @@
   <SkillsAccordion
     isOpen={openSec === 1}
     handleOpen={() => handleOpen(1)}
-    skills={languages}
+    skills={programmingLanguages}
   >
-    Languages
+    Programming Languages
   </SkillsAccordion>
   <SkillsAccordion
     isOpen={openSec === 2}
@@ -39,6 +45,13 @@
     skills={services}
   >
     Services
+  </SkillsAccordion>
+  <SkillsAccordion
+    isOpen={openSec === 4}
+    handleOpen={() => handleOpen(4)}
+    skills={languages}
+  >
+    Languages
   </SkillsAccordion>
 </section>
 
