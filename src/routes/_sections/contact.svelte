@@ -26,8 +26,7 @@
       if (res.ok) {
         submitting = 'submitted';
       } else {
-        submitting = 'form';
-        error = data.message;
+        throw data.message;
       }
     } catch (err) {
       error = err;
