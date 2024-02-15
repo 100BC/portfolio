@@ -20,17 +20,15 @@
 
   function typing(_element: HTMLElement) {
     const interval = setInterval(() => {
-      if (isTyping === false) {
+      if (!isTyping) {
         titleText = titleText.slice(0, -2);
 
         if (titleText.length <= 0) {
           titleIndex = (titleIndex + 1) % titles.length;
           isTyping = true;
         }
-      } else {
-        if (!fullyTyped) {
-          titleText = titleText + titles[titleIndex]![titleText.length];
-        }
+      } else if (!fullyTyped) {
+        titleText = titleText + titles[titleIndex]![titleText.length];
       }
     }, 75);
 
