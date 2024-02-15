@@ -1,7 +1,6 @@
 <script lang="ts">
   let tab = 0;
   let isTyping = true;
-  let titleText = 'Software Developer';
   let titleIndex = 0;
   const titles = [
     'Software Developer',
@@ -9,6 +8,7 @@
     'Front End Developer',
     'Web Developer',
   ];
+  let titleText = titles[titleIndex] || '';
 
   $: fullyTyped = titleText === titles[titleIndex];
 
@@ -24,11 +24,7 @@
         titleText = titleText.slice(0, -2);
 
         if (titleText.length <= 0) {
-          if (titleIndex === titles.length - 1) {
-            titleIndex = 0;
-          } else {
-            titleIndex += 1;
-          }
+          titleIndex = (titleIndex + 1) % titles.length;
           isTyping = true;
         }
       } else {
@@ -46,6 +42,8 @@
   }
 
   function blinking(element: HTMLElement) {
+    element.innerText = '|';
+
     element.animate([{ opacity: 0 }, { opacity: 100 }, { opacity: 0 }], {
       duration: 1200,
       iterations: Infinity,
@@ -59,7 +57,7 @@
     <div class="title">
       <div class="prefix">I am a</div>
       <h2 aria-label="Software Developer">
-        <span use:typing>{titleText}</span><span use:blinking>|</span>
+        <span use:typing>{titleText}</span><span use:blinking />
       </h2>
     </div>
   </div>
