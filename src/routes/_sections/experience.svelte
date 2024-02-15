@@ -12,126 +12,80 @@
   import { goto } from '$app/navigation';
 
   export let urlParam: string | null;
-  const validUrls = [
-    'igniter',
-    'interface',
-    'buddytree',
-    'contract',
-    'trustScience',
-  ];
-  $: isValidUrl = validUrls.includes(urlParam || '');
+
+  const experiences = {
+    igniter,
+    interfaceFluidics,
+    buddytree,
+    contract,
+    trustScience,
+  };
+  type Experience = keyof typeof experiences;
+
+  const expOrdered = Object.keys(experiences) as ReadonlyArray<Experience>;
+  const expUrls = Object.fromEntries(
+    expOrdered.map((exp) => [exp, `?exp=${exp}#experience`])
+  ) as Readonly<Record<Experience, string>>;
 
   const baseUrl = '.#experience';
-  const igniterUrl = '?exp=igniter#experience';
-  const interfaceUrl = '?exp=interface#experience';
-  const buddytreeUrl = '?exp=buddytree#experience';
-  const contractUrl = '?exp=contract#experience';
-  const trustScienceUrl = '?exp=trustScience#experience';
+  $: currentExp = expOrdered.find((v) => v === urlParam);
 
   function handleNext() {
-    switch (urlParam) {
-      case 'igniter':
-        goto(interfaceUrl);
-        break;
-      case 'interface':
-        goto(buddytreeUrl);
-        break;
-      case 'buddytree':
-        goto(contractUrl);
-        break;
-      case 'contract':
-        goto(trustScienceUrl);
-        break;
-      case 'trustScience':
-        goto(igniterUrl);
-        break;
-      default:
-        break;
+    if (!currentExp) {
+      goto(baseUrl);
+      return;
     }
+
+    const next =
+      expOrdered[(expOrdered.indexOf(currentExp) + 1) % expOrdered.length]!;
+    goto(expUrls[next] || baseUrl);
   }
 
   function handlePrev() {
-    switch (urlParam) {
-      case 'igniter':
-        goto(trustScienceUrl);
-        break;
-      case 'interface':
-        goto(igniterUrl);
-        break;
-      case 'buddytree':
-        goto(interfaceUrl);
-        break;
-      case 'contract':
-        goto(buddytreeUrl);
-        break;
-      case 'trustScience':
-        goto(buddytreeUrl);
-        break;
-      default:
-        break;
+    if (!currentExp) {
+      goto(baseUrl);
+      return;
     }
+
+    const i = expOrdered.indexOf(currentExp) - 1;
+    const prev = expOrdered[i < 0 ? expOrdered.length - 1 : i]!;
+    goto(expUrls[prev]);
   }
 </script>
 
 <section aria-label="Work Experience" id="experience" class="fullPage">
-  {#if isValidUrl}
+  {#if currentExp}
     <h2 class="small" in:fly={{ x: 100, duration: 500, opacity: 100 }}>
       <a href={baseUrl} class="back"> Work Experience </a>
     </h2>
     <header aria-label="Work Experience">
       <nav class="desktopNav">
-        <ul>
-          <li class:selected={urlParam === 'igniter'}>
-            <a href={igniterUrl}>Igniter Tickets</a>
-          </li>
-          <li class:selected={urlParam === 'interface'}>
-            <a href={interfaceUrl}>Interface Fluidics</a>
-          </li>
-          <li class:selected={urlParam === 'buddytree'}>
-            <a href={buddytreeUrl}>Buddytree</a>
-          </li>
-          <li class:selected={urlParam === 'contract'}>
-            <a href={contractUrl}>Contract</a>
-          </li>
-          <li class:selected={urlParam === 'trustScience'}>
-            <a href={trustScienceUrl}>Trust Science</a>
-          </li>
-        </ul>
+        <ol>
+          {#each expOrdered as exp}
+            <li class:selected={currentExp === exp}>
+              <a href={expUrls[exp]}>{experiences[exp].title}</a>
+            </li>
+          {/each}
+        </ol>
       </nav>
       <nav class="mobileNav">
         <button type="button" on:click={() => handlePrev()}>Previous</button>
         <button type="button" on:click={() => handleNext()}>Next</button>
       </nav>
     </header>
-    {#if urlParam === 'igniter'}
-      <WorkExperience experience={igniter} isFirst />
-    {:else if urlParam === 'interface'}
-      <WorkExperience experience={interfaceFluidics} />
-    {:else if urlParam === 'buddytree'}
-      <WorkExperience experience={buddytree} />
-    {:else if urlParam === 'contract'}
-      <WorkExperience experience={contract} />
-    {:else if urlParam === 'trustScience'}
-      <WorkExperience experience={trustScience} isLast />
-    {/if}
+    <WorkExperience
+      experience={experiences[currentExp]}
+      isFirst={currentExp === expOrdered[0]}
+      isLast={currentExp === expOrdered[expOrdered.length - 1]}
+    />
   {:else}
     <h2 in:fly={{ x: -100, duration: 500, opacity: 100 }}>Work Experience</h2>
     <ol class="grid" in:scale={{ delay: 200 }}>
-      <li>
-        <ExperienceCard href={igniterUrl} experience={igniter} />
-      </li>
-      <li>
-        <ExperienceCard href={interfaceUrl} experience={interfaceFluidics} />
-      </li>
-      <li>
-        <ExperienceCard href={buddytreeUrl} experience={buddytree} />
-      </li>
-      <li>
-        <ExperienceCard href={contractUrl} experience={contract} />
-      </li>
-      <li>
-        <ExperienceCard href={trustScienceUrl} experience={trustScience} />
-      </li>
+      {#each expOrdered as exp}
+        <li>
+          <ExperienceCard href={expUrls[exp]} experience={experiences[exp]} />
+        </li>
+      {/each}
     </ol>
   {/if}
 </section>
@@ -176,7 +130,7 @@
   }
 
   header {
-    > .desktopNav > ul {
+    > .desktopNav > ol {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
