@@ -107,6 +107,11 @@
   @media screen and (width <= $tablet) {
     section {
       font-size: 2rem;
+
+      > div {
+        max-height: 80%;
+        overflow-y: auto;
+      }
     }
   }
 </style>

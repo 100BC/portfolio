@@ -41,8 +41,10 @@
 
 <style lang="scss">
   .card {
+    max-height: 80%;
     padding: 2rem;
     margin: auto;
+    overflow-y: auto;
     color: #000;
     background-color: #fff;
     border-radius: $borderRadius;

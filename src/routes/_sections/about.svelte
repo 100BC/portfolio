@@ -191,6 +191,8 @@
 
   .right {
     width: 100%;
+    max-height: 80%;
+    overflow-y: auto;
   }
 
   .tabContent,
@@ -216,6 +218,7 @@
 
     .left {
       width: 100%;
+      height: initial;
       clip-path: initial;
     }
 
