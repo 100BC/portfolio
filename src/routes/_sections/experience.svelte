@@ -231,7 +231,7 @@
     }
   }
 
-  @media screen and (width <= $phone) {
+  @media screen and (width <= $tablet) {
     .small {
       font-size: 3rem;
     }

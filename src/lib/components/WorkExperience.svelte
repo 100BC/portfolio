@@ -99,7 +99,7 @@
     }
   }
 
-  @media screen and (width > $phone) {
+  @media screen and (width > $tablet) {
     .isLast {
       border-top-right-radius: 0;
     }
