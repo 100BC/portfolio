@@ -11,8 +11,8 @@ export const igniter = {
       Led a small team to engineer a device-agnostic scanner for mobile to replace a legacy product
       `,
       subTasks: [
-        `Optimized code to elongate battery life through efficient state management`,
-        `Guaranteed data integrity across multiple devices using the service at the same time`,
+        `Prolonged battery life by implementing efficient state management within the component life cycle`,
+        `Guaranteed data integrity across multiple concurrent devices`,
         'Modernized the UI to allow seamless registration of the service, reducing user frustration',
         'Coached a Junior Developer on Software Development best practices',
         'Successfully launched the service in beta, earning positive feedback from clients and end-users',
@@ -21,8 +21,8 @@ export const igniter = {
     {
       task: `Developed a ticket-sharing feature to meet the requirement of a prospective client`,
       subTasks: [
-        'Completed the task half a sprint before the set deadline, resulting in the successful acquisition of the major new client',
-        'In the first quarter after the release the feature was used thousands of times across all clients indicating continued growth',
+        'Completed the task ahead of schedule, securing the successful acquisition of the client',
+        'The feature achieved widespread use, with thousands of instances across all clients in the first quarter, demonstrating ongoing growth',
       ],
     },
     'Addressed critical email delivery issues by increasing domain name trust, improving delivery success rate by 10%',

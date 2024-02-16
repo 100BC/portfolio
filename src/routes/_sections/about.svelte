@@ -80,7 +80,7 @@
       <div class="education tabContent">
         <h3>Bachelor of Science: <em>Computer Science</em></h3>
         <ul>
-          <li>University of Alberta, Class of <time>2020</time></li>
+          <li>University of Alberta, <time>2020</time></li>
           <li>Sociology Minor</li>
           <li>Dean's Honour Roll <time>2020</time></li>
           <li>CMPUT 250 Game of the Year <time>2017</time></li>
