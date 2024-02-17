@@ -6,8 +6,8 @@
 </script>
 
 <a {href}>
-  <h3>{experience.title}</h3>
-  <i>{experience.role}</i>
+  <h3>{experience.role}</h3>
+  <i>{experience.title}</i>
   <time>{experience.time}</time>
   <span class="readMore">Read more</span>
 </a>
@@ -70,7 +70,7 @@
       font-size: $h3FontSize;
     }
 
-    i {
+    time {
       display: none;
     }
 

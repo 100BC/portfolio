@@ -9,7 +9,8 @@
 
 <!-- eslint-disable svelte/no-at-html-tags -->
 <div class="card" class:isLast class:isFirst>
-  <h3>{experience.title} - {experience.role}</h3>
+  <h3>{experience.role}</h3>
+  <i class="title">{experience.title}</i>
   <div class="info">
     <time>{experience.time}</time>
     <address>{experience.location}</address>
@@ -31,7 +32,7 @@
     {/each}
   </ul>
 
-  <h4>Tech Stack</h4>
+  <h4 class="techTitle">Tech Stack</h4>
   <ul class="techStack">
     {#each experience.tech as tech}
       <li>{tech}</li>
@@ -50,15 +51,23 @@
     border-radius: $borderRadius;
 
     > h3 {
-      margin: 0 0 0.5em;
+      margin: 0 0 0.5rem;
       font-size: 2.4rem;
     }
+  }
 
-    > h4 {
-      display: inline-block;
-      margin: 0;
-      font-size: 2rem;
-    }
+  .title,
+  .techTitle {
+    font-size: 2rem;
+  }
+
+  .techTitle {
+    margin: 0;
+  }
+
+  .title {
+    display: block;
+    margin: 1rem 0;
   }
 
   .info {
