@@ -27,6 +27,7 @@
     </nav>
     <nav class="internalNav" aria-label="internal">
       <h2>Web and Software Developer</h2>
+      <address>Toronto, Ontario, Canada</address>
       <ol>
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Work Experience</a></li>

@@ -78,10 +78,9 @@
     </div>
     {#if tab === 1}
       <div class="education tabContent">
-        <h3>Bachelor of Science: <em>Computer Science</em></h3>
+        <h3>University of Alberta, 2020</h3>
         <ul>
-          <li>University of Alberta, <time>2020</time></li>
-          <li>Sociology Minor</li>
+          <li>Bachelor of Science Computer Science, Sociology Minor</li>
           <li>Dean's Honour Roll <time>2020</time></li>
           <li>CMPUT 250 Game of the Year <time>2017</time></li>
         </ul>
@@ -89,19 +88,17 @@
     {:else}
       <div class="tabContent">
         <p>
-          I am a Software Developer and Web Developer. I have deep knowledge in
-          Front End Development, due to my background in Human Computer
+          I am a Full Stack Software and Web Developer, with deep knowledge in
+          Front End Development due to my background in Human Computer
           Interaction. This encompasses advanced knowledge in UI/UX, Semantic
-          HTML, and Web Accessibility Guidelines. I am also skilled in creating
-          mobile friendly websites through Responsive Web Design, SEO, and
-          optimizing software to reduce time-to-first byte.
+          HTML, and Web Accessibility Guidelines (WCAG). I am skilled in
+          creating mobile friendly websites through Responsive Web Design,
+          Search Engine Optimization (SEO), and optimizing software to reduce
+          time-to-first byte. I am also no stranger to Back End development,
+          having experience developing API routes in Model View Controller (MVC)
+          environments, optimizing SQL queries, and creating self-hosted servers
+          for personal projects.
         </p>
-        <p>
-          However, I am no stranger to Back End development, as I have
-          experience developing in Model View Controller (MVC) environments,
-          creating API routes, and optimizing SQL queries.
-        </p>
-        <p>I am currently based in Toronto, ON.</p>
       </div>
     {/if}
   </div>
