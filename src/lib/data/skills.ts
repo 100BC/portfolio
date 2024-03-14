@@ -23,6 +23,7 @@ export const programmingLanguages = [
   'HTML5',
   'CSS3',
   'SCSS',
+  'TailwindCSS',
 ];
 export const services = [
   'Linux',
