@@ -7,6 +7,7 @@
     contract,
     igniter,
     interfaceFluidics,
+    stealthStartup,
     trustScience,
   } from '$lib/data/experience';
   import { goto } from '$app/navigation';
@@ -14,6 +15,7 @@
   export let urlParam: string | null;
 
   const experiences = {
+    stealthStartup,
     igniter,
     interfaceFluidics,
     buddytree,

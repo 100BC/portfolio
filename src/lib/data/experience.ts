@@ -1,5 +1,16 @@
 import type { WorkExperience } from '$lib/types';
 
+export const stealthStartup = {
+  title: 'Stealth Startup',
+  role: 'Full-Stack Developer',
+  time: 'Apr. 2024 - Present',
+  location: 'Remote',
+  duties: [
+    'Leading the development of a Minimum Viable Product (MVP) for a Fin-Tech Startup',
+  ],
+  tech: ['Vue.js', 'JavaScript', 'Supabase', 'PostgreSQL'],
+} satisfies WorkExperience;
+
 export const igniter = {
   title: 'Igniter Tickets',
   role: 'Software Developer',
@@ -11,9 +22,7 @@ export const igniter = {
       Led a small team to engineer a device-agnostic scanner for mobile to replace a legacy product
       `,
       subTasks: [
-        `Elongated battery life through efficient state management and memoization`,
-        `Guaranteed data integrity across multiple concurrent devices`,
-        'Modernized the UI to allow seamless device registration, reducing user frustration',
+        `Ensured efficient state management and data integrity across multiple concurrent devices`,
         'Coached a Junior Developer on Software Development best practices',
         'Successfully beta launched the product, earning positive feedback from clients and end-users',
       ],
@@ -22,7 +31,7 @@ export const igniter = {
       task: `Developed a ticket-sharing feature to meet the requirement of a prospective client`,
       subTasks: [
         'Completed the task ahead of schedule, securing the successful acquisition of the major client',
-        'The feature achieved widespread use, with thousands of instances across all clients in the first quarter, demonstrating ongoing growth',
+        'The feature achieved immediate widespread use, with thousands of instances across all clients',
       ],
     },
     'Addressed critical email delivery issues by increasing domain name trust, improving delivery success rate by 10%',

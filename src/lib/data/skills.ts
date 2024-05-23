@@ -4,6 +4,8 @@ export const frameworks = [
   'Ruby on Rails',
   'Sveltekit',
   'Svelte',
+  'Vue.js',
+  'Ionic Framework',
   'Redux',
   'Material UI',
   'RSpec',
