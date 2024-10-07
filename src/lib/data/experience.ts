@@ -7,7 +7,7 @@ export const stealthStartup = {
   location: 'Remote',
   duties: [
     'Lead the development of a Minimum Viable Product (MVP) for a Fin-Tech Startup',
-    'Developed a dashboard that streamlines requisition form submissions for a Fluid Systems Company',
+    'Developed a dashboard that streamlines requisition form submissions for a construction company',
     'Built an internationalization (i18n) capable intake form for a non-profit organization',
     'Creating homepages for local businesses',
   ],
