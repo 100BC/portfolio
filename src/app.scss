@@ -2,6 +2,8 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 
   @media only screen and (max-width: $tablet) {
     font-size: 56%;
@@ -10,9 +12,6 @@ html {
   @media only screen and (max-width: $phone) {
     font-size: 50%;
   }
-
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
 }
 
 html:has(:modal) {
