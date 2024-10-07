@@ -4,7 +4,6 @@
   import WorkExperience from '$lib/components/WorkExperience.svelte';
   import {
     buddytree,
-    contract,
     igniter,
     interfaceFluidics,
     stealthStartup,
@@ -19,7 +18,6 @@
     igniter,
     interfaceFluidics,
     buddytree,
-    contract,
     trustScience,
   };
   type Experience = keyof typeof experiences;

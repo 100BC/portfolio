@@ -1,14 +1,25 @@
 import type { WorkExperience } from '$lib/types';
 
 export const stealthStartup = {
-  title: 'Stealth Startup',
+  title: 'Contracting',
   role: 'Full-Stack Developer',
   time: 'Apr. 2024 - Present',
   location: 'Remote',
   duties: [
-    'Leading the development of a Minimum Viable Product (MVP) for a Fin-Tech Startup',
+    'Lead the development of a Minimum Viable Product (MVP) for a Fin-Tech Startup',
+    'Developed a dashboard that streamlines requisition form submissions for a Fluid Systems Company',
+    'Built an internationalization (i18n) capable intake form for a non-profit organization',
+    'Creating homepages for local businesses',
   ],
-  tech: ['Vue.js', 'JavaScript', 'Supabase', 'PostgreSQL'],
+  tech: [
+    'Vue.js',
+    'JavaScript',
+    'Supabase',
+    'PostgreSQL',
+    'Sveltekit',
+    'Docker',
+    'Firebase',
+  ],
 } satisfies WorkExperience;
 
 export const igniter = {
@@ -99,32 +110,6 @@ export const buddytree = {
     `Collaborated closely with the CEO to create new features based on Figma designs`,
   ],
   tech: ['React.js', 'Next.js', 'Redux', 'TypeScript', 'JSX', 'SCSS'],
-} satisfies WorkExperience;
-
-export const contract = {
-  title: 'Contract Work',
-  role: 'Web Developer',
-  time: '2020 - present',
-  location: 'Remote',
-  duties: [
-    {
-      task: 'Developing websites for local businesses',
-      subTasks: [
-        '<a href="https://www.jyoupsychology.ca">https://www.jyoupsychology.ca</a>',
-        '<a href="https://www.bbrosfinishing.ca">https://www.bbrosfinishing.ca</a>',
-      ],
-    },
-  ],
-  tech: [
-    'React.js',
-    'Next.js',
-    'Firebase',
-    'TypeScript',
-    'HTML',
-    'Svelte',
-    'Sveltekit',
-    'SCSS',
-  ],
 } satisfies WorkExperience;
 
 export const trustScience = {

@@ -47,5 +47,6 @@ export const skills = [
   'Web Content Accessibility Guidelines (WCAG)',
   'Email Delivery Systems',
   'Unit Testing',
+  'Internationalization (i18n)',
 ];
 export const languages = ['English', 'Arabic', 'Russian'];
